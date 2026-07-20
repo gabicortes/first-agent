@@ -1,5 +1,29 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# Coach Agent
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+## Architecture
+
+- Next.js App Router
+- Gemini API
+- API Route -> Service -> Gemini
+- React UI keeps state
+- Service layer contains business logic
+
+## Current structure
+
+src/
+app/
+api/chat/route.ts
+page.tsx
+lib/
+ai.ts
+services/
+chat.service.ts
+types/
+message.ts
+
+## Principles
+
+- UI owns state.
+- Services own business logic.
+- Don't abstract too early.
+- Components only when they become reusable.
