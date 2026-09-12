@@ -1,78 +1,72 @@
 import { Message } from "@/types/message";
-import { calculateProtein } from "@/tools/protein.tool";
-import { extractWeight, toKilograms } from "@/tools/weight.tool";
 import { ai } from "@/lib/ai";
 import { COACH_PROMPT } from "@/prompts/coach";
+import {
+  calculateProtein,
+  calculateProteinTool,
+} from "@/tools/protein.tool";
 
 const MODEL = "gemini-flash-lite-latest";
 
 export async function generateResponse(
   messages: Message[],
 ): Promise<string> {
-  const contents = messages.map((message) => ({
-    role: message.role === "assistant" ? "model" : "user",
-    parts: [{ text: message.content }],
-  }));
+  const conversation = messages
+    .map((message) => `${message.role}: ${message.content}`)
+    .join("\n");
 
-  const lastMessage = messages[messages.length - 1];
-
-  const isProteinQuestion = lastMessage.content
-    .toLowerCase()
-    .includes("protein");
-
-  if (isProteinQuestion) {
-    const weightMessage = messages
-      .toReversed()
-      .find(
-        (message) =>
-          message.role === "user" &&
-          extractWeight(message.content) !== null,
-      );
-
-    if (weightMessage) {
-      const weight = extractWeight(weightMessage.content);
-
-      if (weight) {
-        const weightKg = toKilograms(weight);
-        const protein = calculateProtein(weightKg);
-
-        const toolContext = `
-          The protein calculator returned ${protein} grams of protein per day
-          for a body weight of ${weightKg.toFixed(1)} kg.
-
-          Use this result when answering the user.
-          `;
-
-        const response = await ai.models.generateContent({
-          model: MODEL,
-          contents: [
-            ...contents,
-            {
-              role: "user",
-              parts: [
-                {
-                  text: toolContext,
-                },
-              ],
-            },
-          ],
-          config: {
-            systemInstruction: COACH_PROMPT,
-          },
-        });
-
-        return response.text ?? "";
-      }
-    }
-  }
-
-  const response = await ai.models.generateContent({
+  const interaction = await ai.interactions.create({
     model: MODEL,
-    contents,
-    config: {
-      systemInstruction: COACH_PROMPT,
-    },
+    input: conversation,
+    system_instruction: COACH_PROMPT,
+    tools: [calculateProteinTool],
   });
 
-  return response.text ?? "";
+  const functionCall = interaction.steps?.find(
+    (step) => step.type === "function_call",
+  );
+
+  // No tool needed → return Gemini's normal answer
+  if (!functionCall) {
+    return interaction.output_text ?? "";
+  }
+
+  // Gemini requested our protein tool
+  if (functionCall.name === "calculate_protein") {
+    const weightKg = Number(functionCall.arguments.weightKg);
+
+    console.log("Gemini requested:", {
+      name: functionCall.name,
+      arguments: functionCall.arguments,
+    });
+
+    const protein = calculateProtein(weightKg);
+
+    console.log("Tool result:", protein);
+
+    const finalInteraction = await ai.interactions.create({
+      model: MODEL,
+      previous_interaction_id: interaction.id,
+      tools: [calculateProteinTool],
+      input: [
+        {
+          type: "function_result",
+          name: functionCall.name,
+          call_id: functionCall.id,
+          result: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                proteinGramsPerDay: protein,
+              }),
+            },
+          ],
+        },
+      ],
+    });
+
+    return finalInteraction.output_text ?? "";
+  }
+
+  throw new Error(`Unknown tool requested: ${functionCall.name}`);
 }
