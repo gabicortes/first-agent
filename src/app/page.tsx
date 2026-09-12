@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
+
 import { Message } from "@/types/message";
+import { sendChatMessage } from "@/lib/chat-api";
 
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const sendMessage = async () => {
+  async function sendMessage() {
     if (!message.trim()) return;
 
     setLoading(true);
@@ -18,29 +20,17 @@ export default function Home() {
       content: message,
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+
+    setMessages(updatedMessages);
     setMessage("");
 
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          message: userMessage.content,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send message");
-      }
-
-      const data = await response.json();
+      const content = await sendChatMessage(updatedMessages);
 
       const assistantMessage: Message = {
         role: "assistant",
-        content: data.response,
+        content,
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
@@ -49,7 +39,7 @@ export default function Home() {
     } finally {
       setLoading(false);
     }
-  };
+  }
 
   return (
     <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-4 p-8">

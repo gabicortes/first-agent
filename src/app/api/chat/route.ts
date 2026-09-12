@@ -1,24 +1,28 @@
+import { Message } from "@/types/message";
 import { generateResponse } from "@/services/chat.service";
 
 type ChatRequest = {
-  message: string;
+  messages: Message[];
 };
 
 export async function POST(request: Request) {
   try {
     const body: ChatRequest = await request.json();
 
-    const response = await generateResponse(body.message);
+    const response = await generateResponse(body.messages);
 
     return Response.json({
       response,
     });
   } catch (error) {
-    console.error(error);
-
+    console.error("Chat API error:", error);
+  
     return Response.json(
       {
-        error: "Something went wrong.",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong.",
       },
       {
         status: 500,
