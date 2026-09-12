@@ -10,8 +10,9 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function sendMessage() {
-    if (!message.trim()) return;
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!message.trim() || loading) return;
 
     setLoading(true);
 
@@ -42,31 +43,44 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-2xl flex-col gap-4 p-8">
+    <main className="mx-auto flex min-h-screen w-[42rem] max-w-full flex-col gap-4 p-8">
       <h1 className="text-3xl font-bold">🏋️ Coach Agent</h1>
 
-      <div className="flex-1 rounded-lg border p-4">
+      <div className="flex-1 overflow-hidden rounded-lg border p-4">
         {messages.map((msg, index) => (
-          <p key={index}>
-            <strong>{msg.role}:</strong> {msg.content}
+          <p key={index} className="break-words">
+            <strong>
+              {msg.role.charAt(0).toUpperCase() + msg.role.slice(1)}:
+            </strong>{" "}
+            {msg.content}
           </p>
         ))}
       </div>
 
-      <input
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type your message..."
-        className="rounded-lg border px-4 py-2 outline-none focus:ring-2"
-      />
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <label htmlFor="message-input" className="sr-only">
+          Message
+        </label>
+        <input
+          id="message-input"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Type your message..."
+          disabled={loading}
+          aria-disabled={loading}
+          className="rounded-lg border px-4 py-2 outline-none focus:ring-2 disabled:opacity-50"
+        />
 
-      <button
-        onClick={sendMessage}
-        disabled={loading}
-        className="rounded-lg bg-black px-4 py-2 text-white disabled:opacity-50"
-      >
-        {loading ? "Thinking..." : "Send"}
-      </button>
+        <button
+          type="submit"
+          disabled={loading || !message.trim()}
+          aria-label="Send message"
+          aria-busy={loading}
+          className="rounded-lg bg-black px-4 py-2 text-white disabled:opacity-50"
+        >
+          {loading ? "Thinking..." : "Send"}
+        </button>
+      </form>
     </main>
   );
 }
