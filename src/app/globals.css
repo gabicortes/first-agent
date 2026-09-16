@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #dadada;
+  --foreground: #151515;
+  --accent: #e6ff38;
 }
 
 @theme inline {
@@ -12,15 +13,77 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
+button, textarea, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+button:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset: 4px; }
+.coach-app { height: 100dvh; min-height: 480px; display: flex; flex-direction: column; }
+.app-header { min-height: 80px; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #cecece; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
+.brand-icon { flex-shrink: 0; width: 43px; height: 43px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; }
+.brand-icon svg, .welcome-icon svg, .send-button svg, .suggestions-toggle svg { display: block; flex-shrink: 0; max-width: 100%; max-height: 100%; }
+.brand-icon svg { width: 23px; height: 23px; }
+.brand-name, .welcome h1 { font-family: var(--font-heading), Impact, "Arial Narrow", sans-serif; font-weight: 700; }
+.brand-name { display: block; font-size: 25px; line-height: 1.05; letter-spacing: .3px; }
+.brand-subtitle, .coach-status, .suggestions-toggle, .keyboard-hint, .message-author { font-family: var(--font-geist-mono), monospace; }
+.brand-subtitle { display: flex; align-items: center; gap: 7px; margin-top: 5px; font-size: 11px; color: #676767; letter-spacing: .3px; }
+.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #777; flex-shrink: 0; }
+.coach-status { border: 1px solid #c4c4c4; border-radius: 24px; padding: 6px 14px; font-size: 11px; white-space: nowrap; letter-spacing: .5px; }
+.conversation { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+.welcome { margin: auto; padding: 40px 20px 80px; text-align: center; }
+.welcome-icon { width: 76px; height: 76px; border-radius: 21px; background: var(--accent); display: grid; place-items: center; margin: 0 auto 34px; }
+.welcome-icon svg { width: 34px; height: 34px; }
+.welcome h1 { margin: 0; font-size: clamp(28px, 3vw, 36px); line-height: 1.25; letter-spacing: .1px; }
+.welcome p { color: #5d5d5d; font-size: 16px; line-height: 1.5; margin: 18px 0 0; }
+.suggestions { padding: 12px 20px 14px; }
+.suggestions-toggle { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #5d5d5d; border: 0; background: transparent; padding: 0; margin-bottom: 15px; font-weight: 600; }
+.suggestions-toggle svg { transition: transform .15s; }
+.suggestions-toggle svg.collapsed { transform: rotate(-90deg); }
+.suggestion-list { display: flex; gap: 8px; flex-wrap: wrap; }
+.suggestion-list button { padding: 8px 14px; border: 1px solid #bfbfbf; border-radius: 24px; background: #cbcbcb; color: #595959; font-size: 14px; font-weight: 600; line-height: 1.25; text-align: left; transition: background .15s, border-color .15s; }
+.suggestion-list button:hover:not(:disabled) { background: #d9dfb2; border-color: #a6ad79; }
+.suggestion-list button:disabled { opacity: .5; }
+.composer-area { border-top: 1px solid #cecece; padding: 10px 20px 16px; }
+.composer { display: flex; align-items: center; gap: 12px; padding: 9px; border: 1px solid #bfbfbf; border-radius: 20px; background: #cacaca; }
+.composer:focus-within { border-color: #92966e; box-shadow: 0 0 0 2px #e6ff3830; }
+.composer textarea { resize: none; field-sizing: content; min-height: 42px; max-height: 144px; flex: 1; min-width: 0; border: 0; outline: none; background: transparent; padding: 10px; font: inherit; font-size: 16px; line-height: 22px; }
+.composer textarea::placeholder { color: #606060; opacity: 1; }
+.send-button { border: 0; border-radius: 16px; width: 43px; height: 43px; flex-shrink: 0; background: var(--accent); display: grid; place-items: center; }
+.send-button:disabled { opacity: .3; }
+.send-button:hover:not(:disabled) { background: #d5ee25; }
+.send-button svg { width: 22px; height: 22px; }
+.keyboard-hint { font-size: 10px; text-align: center; color: #666; margin: 10px 0 0; }
+.message-list { width: min(100%, 860px); margin: 0 auto; padding: 32px 24px; }
+.chat-message { margin-bottom: 24px; }
+.chat-message.user { margin-left: auto; width: fit-content; max-width: 90%; background: #c9c9c9; padding: 16px 20px; border-radius: 18px 18px 4px 18px; }
+.chat-message.assistant { padding: 8px 0; }
+.message-author { display: block; font-size: 11px; font-weight: 600; letter-spacing: .7px; color: #606060; margin-bottom: 8px; }
+.message-content { overflow-wrap: anywhere; font-size: 15px; line-height: 1.7; }
+.message-content p + p, .message-content ul, .message-content ol { margin-top: 12px; }
+.message-content ul { list-style: disc; padding-left: 24px; }
+.message-content ol { list-style: decimal; padding-left: 24px; }
+.message-content h1, .message-content h2, .message-content h3 { font-weight: 700; margin: 16px 0 8px; }
+.message-content pre { overflow-x: auto; padding: 12px; background: #c7c7c7; border-radius: 8px; }
+.message-content img { display: block; width: auto; height: auto; max-width: min(100%, 480px); max-height: 320px; object-fit: contain; margin: 12px 0; border-radius: 12px; }
+.message-content a { text-decoration: underline; }
+.thinking { display: flex; align-items: center; gap: 8px; color: #606060; font-size: 14px; }
+.thinking .status-dot { background: #8c981c; }
+.chat-error { color: #8a2828; font-size: 13px; margin: 0 0 10px; }
+@media (max-width: 640px) {
+  .app-header { min-height: 72px; padding: 14px 16px; }
+  .brand { gap: 10px; }
+  .brand-name { font-size: 22px; }
+  .brand-subtitle { font-size: 8px; }
+  .coach-status { font-size: 9px; padding: 6px 9px; }
+  .welcome { padding: 32px 20px; }
+  .welcome-icon { width: 64px; height: 64px; margin-bottom: 24px; border-radius: 18px; }
+  .welcome p { font-size: 14px; }
+  .suggestions { padding: 12px; }
+  .suggestion-list { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; }
+  .suggestion-list button { flex-shrink: 0; max-width: 290px; font-size: 12px; }
+  .composer-area { padding: 10px 12px max(12px, env(safe-area-inset-bottom)); }
+  .composer textarea { padding-left: 5px; }
+  .keyboard-hint { font-size: 8px; }
 }
