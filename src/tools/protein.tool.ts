@@ -1,15 +1,17 @@
-export function extractWeight(message: string): number | null {
-  const match = message.match(/\d+/);
+import { z } from "zod";
 
-  if (!match) {
-    return null;
-  }
+export const calculateProteinSchema = z.object({
+  weightKg: z.number().positive(),
+});
 
-  return Number(match[0]);
-}
+export type CalculateProteinInput = z.infer<
+  typeof calculateProteinSchema
+>;
 
-export function calculateProtein(weight: number): number {
-    return weight * 2;
+export function calculateProtein({
+  weightKg,
+}: CalculateProteinInput): number {
+  return weightKg * 2;
 }
 
 export const calculateProteinTool = {
