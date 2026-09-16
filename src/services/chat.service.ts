@@ -12,7 +12,9 @@ const MODEL = "gemini-flash-lite-latest";
 
 export async function generateResponse(
   messages: Message[],
+  language: "en" | "es" = "es",
 ): Promise<string> {
+  const systemInstruction = `${COACH_PROMPT}\nThe interface language is ${language === "es" ? "Spanish" : "English"}. Use it as the default only when no conversation language or explicit language preference has been established.`;
   const conversation = messages
     .map(
       (message) =>
@@ -23,7 +25,7 @@ export async function generateResponse(
   let interaction = await ai.interactions.create({
     model: MODEL,
     input: conversation,
-    system_instruction: COACH_PROMPT,
+    system_instruction: systemInstruction,
     tools: toolDeclarations,
   });
 
@@ -68,6 +70,7 @@ export async function generateResponse(
     interaction = await ai.interactions.create({
       model: MODEL,
       previous_interaction_id: interaction.id,
+      system_instruction: systemInstruction,
       tools: toolDeclarations,
       input: toolResults,
     });

@@ -2,6 +2,18 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+The chat supports English and Spanish. Use the language selector in the header
+to change interface text and suggested questions. The coach follows the language
+of your latest message or an explicit language request; the interface language
+is the fallback for a new conversation. Switching languages preserves the chat
+history and your draft. The selector uses 🇪🇸 for Spanish and 🇬🇧 for English,
+and defaults to Spanish on page reload.
+
+To manually check Spanish responses with Gemini configured, select 🇪🇸 and
+ask “¿Cuánta proteína necesito?”. The coach should ask for your weight in Spanish.
+Reply “70,5 kg”: it should use the protein tool and explain the 141 g daily result
+in Spanish. Then ask a question in English to check language switching.
+
 First, run the development server:
 
 ```bash

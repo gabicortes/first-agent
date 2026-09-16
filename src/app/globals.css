@@ -18,7 +18,7 @@ body { margin: 0; background: var(--background); color: var(--foreground); font-
 button, textarea, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
 button:disabled { cursor: default; }
-button:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset: 4px; }
+button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset: 4px; }
 .coach-app { height: 100dvh; min-height: 480px; display: flex; flex-direction: column; }
 .app-header { min-height: 80px; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #cecece; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
@@ -27,10 +27,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset:
 .brand-icon svg { width: 23px; height: 23px; }
 .brand-name, .welcome h1 { font-family: var(--font-heading), Impact, "Arial Narrow", sans-serif; font-weight: 700; }
 .brand-name { display: block; font-size: 25px; line-height: 1.05; letter-spacing: .3px; }
-.brand-subtitle, .coach-status, .suggestions-toggle, .keyboard-hint, .message-author { font-family: var(--font-geist-mono), monospace; }
+.brand-subtitle, .suggestions-toggle, .keyboard-hint, .message-author { font-family: var(--font-geist-mono), monospace; }
 .brand-subtitle { display: flex; align-items: center; gap: 7px; margin-top: 5px; font-size: 11px; color: #676767; letter-spacing: .3px; }
 .status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #777; flex-shrink: 0; }
-.coach-status { border: 1px solid #c4c4c4; border-radius: 24px; padding: 6px 14px; font-size: 11px; white-space: nowrap; letter-spacing: .5px; }
 .conversation { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
 .welcome { margin: auto; padding: 40px 20px 80px; text-align: center; }
 .welcome-icon { width: 76px; height: 76px; border-radius: 21px; background: var(--accent); display: grid; place-items: center; margin: 0 auto 34px; }
@@ -76,7 +75,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset:
   .brand { gap: 10px; }
   .brand-name { font-size: 22px; }
   .brand-subtitle { font-size: 8px; }
-  .coach-status { font-size: 9px; padding: 6px 9px; }
   .welcome { padding: 32px 20px; }
   .welcome-icon { width: 64px; height: 64px; margin-bottom: 24px; border-radius: 18px; }
   .welcome p { font-size: 14px; }
@@ -86,4 +84,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid #555; outline-offset:
   .composer-area { padding: 10px 12px max(12px, env(safe-area-inset-bottom)); }
   .composer textarea { padding-left: 5px; }
   .keyboard-hint { font-size: 8px; }
+}
+
+.header-controls { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 8px 24px; }
+.language-select { appearance: none; -webkit-appearance: none; border: 0; border-radius: 0; box-shadow: none; padding: 6px 30px 6px 10px; background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23151515' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center; color: #151515; font: inherit; font-size: 20px; cursor: pointer; }
+@media (max-width: 640px) {
+  .app-header { flex-wrap: wrap; }
+  .header-controls { margin-left: auto; }
 }

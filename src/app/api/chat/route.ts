@@ -3,13 +3,18 @@ import { generateResponse } from "@/services/chat.service";
 
 type ChatRequest = {
   messages: Message[];
+  language?: "en" | "es";
 };
 
 export async function POST(request: Request) {
   try {
     const body: ChatRequest = await request.json();
 
-    const response = await generateResponse(body.messages);
+    if (body.language !== undefined && body.language !== "en" && body.language !== "es") {
+      return Response.json({ error: "Unsupported language" }, { status: 400 });
+    }
+
+    const response = await generateResponse(body.messages, body.language);
 
     return Response.json({
       response,
