@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
@@ -43,16 +44,16 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto flex min-h-screen w-[42rem] max-w-full flex-col gap-4 p-8">
+    <main className="mx-auto flex min-h-screen w-2xl max-w-full flex-col gap-4 p-8">
       <h1 className="text-3xl font-bold">🏋️ Coach Agent</h1>
 
       <div className="flex-1 overflow-hidden rounded-lg border p-4">
         {messages.map((msg, index) => (
-          <p key={index} className="break-words">
+          <p key={index} className="wrap-break-word">
             <strong>
               {msg.role.charAt(0).toUpperCase() + msg.role.slice(1)}:
             </strong>{" "}
-            {msg.content}
+            <ReactMarkdown>{msg.content}</ReactMarkdown>
           </p>
         ))}
       </div>
