@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBolt, faDumbbell } from "@fortawesome/free-solid-svg-icons";
 
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
@@ -109,9 +111,7 @@ export default function Home() {
       <header className="app-header">
         <Link className="brand" href="/" aria-label={text.home}>
           <span className="brand-icon" aria-hidden="true">
-            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <path d="m6.5 6.5 11 11M4 9l5-5m6 16 5-5M2.5 6.5l4-4m11 19 4-4M4.5 4.5l3 3m9 9 3 3M9 9l6 6m-5-9 8 8M6 10l8 8" />
-            </svg>
+            <FontAwesomeIcon icon={faDumbbell} />
           </span>
           <span><span className="brand-name">FITCOACH AI</span><span className="brand-subtitle"><span className="status-dot" />{text.subtitle}</span></span>
         </Link>
@@ -127,7 +127,7 @@ export default function Home() {
         {messages.length === 0 ? (
           <section className="welcome">
             <div className="welcome-icon" aria-hidden="true">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z" /></svg>
+              <FontAwesomeIcon icon={faBolt} />
             </div>
             <h1>{text.title}</h1>
             <p>{text.topics}</p>
