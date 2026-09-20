@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faDumbbell } from "@fortawesome/free-solid-svg-icons";
@@ -26,6 +27,8 @@ const copy = {
     hint: "SHIFT+ENTER FOR NEW LINE · ENTER TO SEND",
     error: "Couldn't reach your coach. Please try sending your message again.",
     language: "Language",
+    signIn: "Sign in",
+    signUp: "Create account",
     suggestions: [
       "What's the best split for building muscle 4 days/week?",
       "How much protein do I actually need?",
@@ -51,6 +54,8 @@ const copy = {
     hint: "SHIFT+ENTER PARA UN SALTO DE LÍNEA · ENTER PARA ENVIAR",
     error: "No se pudo contactar a tu entrenador. Intenta enviar tu mensaje de nuevo.",
     language: "Idioma",
+    signIn: "Iniciar sesión",
+    signUp: "Crear cuenta",
     suggestions: [
       "¿Cómo distribuyo mi entrenamiento para ganar músculo 4 días por semana?",
       "¿Cuánta proteína necesito realmente?",
@@ -117,6 +122,17 @@ export default function Home() {
           <span><span className="brand-name">FITCOACH AI</span><span className="brand-subtitle"><span className="status-dot" />{text.subtitle}</span></span>
         </Link>
         <div className="header-controls">
+          <Show when="signed-out">
+            <SignInButton>
+              <button type="button" className="auth-button">{text.signIn}</button>
+            </SignInButton>
+            <SignUpButton>
+              <button type="button" className="auth-button auth-button-primary">{text.signUp}</button>
+            </SignUpButton>
+          </Show>
+          <Show when="signed-in">
+            <UserButton />
+          </Show>
           <select className="language-select" aria-label={text.language} value={language} disabled={loading} onChange={(event) => setLanguage(event.target.value === "es" ? "es" : "en")}>
             <option value="en" lang="en" aria-label="English">🇬🇧</option>
             <option value="es" lang="es" aria-label="Español">🇪🇸</option>

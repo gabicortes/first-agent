@@ -78,7 +78,7 @@ or explicit language preference has been established.
       console.log("Tool requested:", {
         name: functionCall.name,
         arguments: functionCall.arguments,
-      });
+    });
 
       const result = await executeTool(
         functionCall.name,
