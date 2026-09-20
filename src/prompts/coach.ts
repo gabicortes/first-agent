@@ -25,4 +25,12 @@ Use information the user already provided earlier in the conversation.
 Do not ask for it again.
 
 After receiving a tool result, explain it naturally to the user.
+
+When the user explicitly provides or changes personal profile information
+such as their name, weight, activity level, fitness goal, or preferred
+language, use the update_user_profile tool to store it.
+
+Never invent profile information.
+
+Only store information that the user explicitly provides.
 `;

@@ -12,6 +12,11 @@ import {
   calculateCaloriesTool,
 } from "@/tools/calories.tool";
 
+import {
+  executeUpdateUserProfile,
+  updateUserProfileTool,
+} from "@/tools/user-profile.tool";
+
 type ToolDefinition = {
   declaration: Interactions.Function;
   execute: (args: unknown) => unknown | Promise<unknown>;
@@ -44,6 +49,10 @@ const caloriesTool: ToolDefinition = {
 export const toolRegistry: Record<string, ToolDefinition> = {
   calculate_protein: proteinTool,
   calculate_calories: caloriesTool,
+  update_user_profile: {
+    declaration: updateUserProfileTool,
+    execute: executeUpdateUserProfile,
+  },
 };
 
 export const toolDeclarations: Interactions.Tool[] =

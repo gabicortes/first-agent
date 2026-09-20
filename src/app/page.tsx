@@ -5,7 +5,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faDumbbell } from "@fortawesome/free-solid-svg-icons";
-
+import { UserProfile } from "@/types/user-profile";
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
 
@@ -67,6 +67,7 @@ export default function Home() {
   const text = copy[language];
   const [messages, setMessages] = useState<Message[]>([]);
   const [message, setMessage] = useState("");
+  const [userProfile, setUserProfile] = useState<UserProfile>({ language: "es" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
