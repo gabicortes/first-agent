@@ -17,19 +17,28 @@ import {
   updateUserProfileTool,
 } from "@/tools/user-profile.tool";
 
+export type ToolContext = {
+  userId: string;
+};
+
 type ToolDefinition = {
   declaration: Interactions.Function;
-  execute: (args: unknown) => unknown | Promise<unknown>;
+  execute: (
+    args: unknown,
+    context: ToolContext,
+  ) => unknown | Promise<unknown>;
 };
 
 const proteinTool: ToolDefinition = {
   declaration: calculateProteinTool,
 
   execute: (args) => {
-    const validatedArgs = calculateProteinSchema.parse(args);
+    const validatedArgs =
+      calculateProteinSchema.parse(args);
 
     return {
-      proteinGramsPerDay: calculateProtein(validatedArgs),
+      proteinGramsPerDay:
+        calculateProtein(validatedArgs),
     };
   },
 };
@@ -38,21 +47,34 @@ const caloriesTool: ToolDefinition = {
   declaration: calculateCaloriesTool,
 
   execute: (args) => {
-    const validatedArgs = calculateCaloriesSchema.parse(args);
+    const validatedArgs =
+      calculateCaloriesSchema.parse(args);
 
     return {
-      caloriesPerDay: calculateCalories(validatedArgs),
+      caloriesPerDay:
+        calculateCalories(validatedArgs),
     };
   },
 };
 
-export const toolRegistry: Record<string, ToolDefinition> = {
+const userProfileTool: ToolDefinition = {
+  declaration: updateUserProfileTool,
+
+  execute: (args, context) => {
+    return executeUpdateUserProfile(
+      args,
+      context.userId,
+    );
+  },
+};
+
+export const toolRegistry: Record<
+  string,
+  ToolDefinition
+> = {
   calculate_protein: proteinTool,
   calculate_calories: caloriesTool,
-  update_user_profile: {
-    declaration: updateUserProfileTool,
-    execute: executeUpdateUserProfile,
-  },
+  update_user_profile: userProfileTool,
 };
 
 export const toolDeclarations: Interactions.Tool[] =
@@ -63,6 +85,7 @@ export const toolDeclarations: Interactions.Tool[] =
 export async function executeTool(
   name: string,
   args: unknown,
+  context: ToolContext,
 ) {
   const tool = toolRegistry[name];
 
@@ -70,5 +93,5 @@ export async function executeTool(
     throw new Error(`Unknown tool: ${name}`);
   }
 
-  return tool.execute(args);
+  return tool.execute(args, context);
 }

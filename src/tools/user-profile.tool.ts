@@ -2,8 +2,6 @@ import { z } from "zod";
 import { prisma } from "../../prisma";
 
 
-const TEST_USER_ID = "test-user";
-
 export const updateUserProfileSchema = z.object({
   name: z.string().optional(),
   weightKg: z.number().positive().optional(),
@@ -50,18 +48,19 @@ export const updateUserProfileTool = {
 
 export async function executeUpdateUserProfile(
   args: unknown,
+  userId: string,
 ) {
   const data = updateUserProfileSchema.parse(args);
 
   const profile = await prisma.userProfile.upsert({
     where: {
-      userId: TEST_USER_ID,
+      userId,
     },
 
     update: data,
 
     create: {
-      userId: TEST_USER_ID,
+      userId,
       ...data,
     },
   });

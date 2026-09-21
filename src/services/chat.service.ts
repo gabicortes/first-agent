@@ -14,11 +14,12 @@ const MODEL = "gemini-flash-lite-latest";
 
 export async function generateResponse(
   messages: Message[],
+  userId: string,
   language: "en" | "es" = "es",
 ): Promise<string> {
   const userProfile = await prisma.userProfile.findUnique({
     where: {
-      userId: "test-user",
+      userId
     },
   });
 
@@ -80,10 +81,13 @@ or explicit language preference has been established.
         arguments: functionCall.arguments,
     });
 
-      const result = await executeTool(
-        functionCall.name,
-        functionCall.arguments,
-      );
+    const result = await executeTool(
+      functionCall.name,
+      functionCall.arguments,
+      {
+        userId,
+      },
+    );
 
       console.log("Tool result:", result);
 

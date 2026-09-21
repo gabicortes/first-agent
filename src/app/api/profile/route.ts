@@ -1,32 +1,44 @@
-import { prisma } from "../../../../prisma";
+import { auth } from "@clerk/nextjs/server";
 
-const TEST_USER_ID = "test-user";
+import { Message } from "@/types/message";
+import { generateResponse } from "@/services/chat.service";
 
-export async function POST() {
-  const profile = await prisma.userProfile.upsert({
-    where: {
-      userId: TEST_USER_ID,
-    },
-    update: {
-      name: "Gabi",
-      weightKg: 46,
-    },
-    create: {
-      userId: TEST_USER_ID,
-      name: "Gabi",
-      weightKg: 46,
-    },
-  });
+type ChatRequest = {
+  messages: Message[];
+  language?: "en" | "es";
+};
 
-  return Response.json(profile);
-}
+export async function POST(request: Request) {
+  try {
+    const { userId } = await auth();
 
-export async function GET() {
-  const profile = await prisma.userProfile.findUnique({
-    where: {
-      userId: TEST_USER_ID,
-    },
-  });
+    if (!userId) {
+      return Response.json(
+        { error: "Unauthorized" },
+        { status: 401 },
+      );
+    }
 
-  return Response.json(profile);
+    const body: ChatRequest = await request.json();
+
+    const response = await generateResponse(
+      body.messages,
+      userId,
+      body.language,
+    );
+
+    return Response.json({ response });
+  } catch (error) {
+    console.error("Chat API error:", error);
+
+    return Response.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong.",
+      },
+      { status: 500 },
+    );
+  }
 }
