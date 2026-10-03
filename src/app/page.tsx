@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBolt, faDumbbell } from "@fortawesome/free-solid-svg-icons";
+import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import { UserProfile } from "@/types/user-profile";
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
@@ -117,7 +119,7 @@ export default function Home() {
       <header className="app-header">
         <Link className="brand" href="/" aria-label={text.home}>
           <span className="brand-icon" aria-hidden="true">
-            <FontAwesomeIcon icon={faDumbbell} />
+            <Image src={logo} alt="" sizes="43px" priority />
           </span>
           <span><span className="brand-name">FITCOACH AI</span><span className="brand-subtitle"><span className="status-dot" />{text.subtitle}</span></span>
         </Link>

@@ -23,8 +23,8 @@ button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid
 .app-header { min-height: 80px; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #cecece; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
 .brand-icon { flex-shrink: 0; width: 43px; height: 43px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; }
-.brand-icon svg, .welcome-icon svg, .send-button svg, .suggestions-toggle svg { display: block; flex-shrink: 0; max-width: 100%; max-height: 100%; }
-.brand-icon svg { width: 23px; height: 23px; }
+.welcome-icon svg, .send-button svg, .suggestions-toggle svg { display: block; flex-shrink: 0; max-width: 100%; max-height: 100%; }
+.brand-icon img { display: block; width: 100%; height: auto; }
 .brand-name, .welcome h1 { font-family: var(--font-heading), Impact, "Arial Narrow", sans-serif; font-weight: 700; }
 .brand-name { display: block; font-size: 25px; line-height: 1.05; letter-spacing: .3px; }
 .brand-subtitle, .suggestions-toggle, .keyboard-hint, .message-author { font-family: var(--font-geist-mono), monospace; }
