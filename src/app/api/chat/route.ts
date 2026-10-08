@@ -1,3 +1,5 @@
+import { auth } from "@clerk/nextjs/server";
+
 import { Message } from "@/types/message";
 import { generateResponse } from "@/services/chat.service";
 
@@ -8,30 +10,25 @@ type ChatRequest = {
 
 export async function POST(request: Request) {
   try {
+    const { userId } = await auth();
+
     const body: ChatRequest = await request.json();
 
-    if (body.language !== undefined && body.language !== "en" && body.language !== "es") {
-      return Response.json({ error: "Unsupported language" }, { status: 400 });
-    }
+    const response = await generateResponse(
+      body.messages,
+      userId,
+      body.language,
+    );
 
-    const response = await generateResponse(body.messages, body.language);
-
-    return Response.json({
-      response,
-    });
+    return Response.json({ response });
   } catch (error) {
     console.error("Chat API error:", error);
-  
+
     return Response.json(
       {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Something went wrong.",
+        error: error instanceof Error ? error.message : "Something went wrong.",
       },
-      {
-        status: 500,
-      },
+      { status: 500 },
     );
   }
 }

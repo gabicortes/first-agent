@@ -18,27 +18,22 @@ import {
 } from "@/tools/user-profile.tool";
 
 export type ToolContext = {
-  userId: string;
+  userId: string | null;
 };
 
 type ToolDefinition = {
   declaration: Interactions.Function;
-  execute: (
-    args: unknown,
-    context: ToolContext,
-  ) => unknown | Promise<unknown>;
+  execute: (args: unknown, context: ToolContext) => unknown | Promise<unknown>;
 };
 
 const proteinTool: ToolDefinition = {
   declaration: calculateProteinTool,
 
   execute: (args) => {
-    const validatedArgs =
-      calculateProteinSchema.parse(args);
+    const validatedArgs = calculateProteinSchema.parse(args);
 
     return {
-      proteinGramsPerDay:
-        calculateProtein(validatedArgs),
+      proteinGramsPerDay: calculateProtein(validatedArgs),
     };
   },
 };
@@ -47,12 +42,10 @@ const caloriesTool: ToolDefinition = {
   declaration: calculateCaloriesTool,
 
   execute: (args) => {
-    const validatedArgs =
-      calculateCaloriesSchema.parse(args);
+    const validatedArgs = calculateCaloriesSchema.parse(args);
 
     return {
-      caloriesPerDay:
-        calculateCalories(validatedArgs),
+      caloriesPerDay: calculateCalories(validatedArgs),
     };
   },
 };
@@ -61,26 +54,31 @@ const userProfileTool: ToolDefinition = {
   declaration: updateUserProfileTool,
 
   execute: (args, context) => {
-    return executeUpdateUserProfile(
-      args,
-      context.userId,
-    );
+    if (!context.userId) {
+      throw new Error("User must be authenticated to update their profile.");
+    }
+
+    return executeUpdateUserProfile(args, context.userId);
   },
 };
 
-export const toolRegistry: Record<
-  string,
-  ToolDefinition
-> = {
+export const toolRegistry: Record<string, ToolDefinition> = {
   calculate_protein: proteinTool,
   calculate_calories: caloriesTool,
   update_user_profile: userProfileTool,
 };
 
-export const toolDeclarations: Interactions.Tool[] =
-  Object.values(toolRegistry).map(
-    (tool) => tool.declaration,
-  );
+export function getToolDeclarations(context: ToolContext): Interactions.Tool[] {
+  return Object.values(toolRegistry)
+    .filter((tool) => {
+      if (tool.declaration.name === "update_user_profile" && !context.userId) {
+        return false;
+      }
+
+      return true;
+    })
+    .map((tool) => tool.declaration);
+}
 
 export async function executeTool(
   name: string,

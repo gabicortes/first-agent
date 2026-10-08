@@ -12,13 +12,6 @@ export async function POST(request: Request) {
   try {
     const { userId } = await auth();
 
-    if (!userId) {
-      return Response.json(
-        { error: "Unauthorized" },
-        { status: 401 },
-      );
-    }
-
     const body: ChatRequest = await request.json();
 
     const response = await generateResponse(
@@ -33,10 +26,7 @@ export async function POST(request: Request) {
 
     return Response.json(
       {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Something went wrong.",
+        error: error instanceof Error ? error.message : "Something went wrong.",
       },
       { status: 500 },
     );
