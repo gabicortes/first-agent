@@ -1,7 +1,7 @@
 import { Message } from "@/types/message";
 
 import { ai } from "@/lib/ai";
-import { skillDescriptions } from "@/skills/skill-registry";
+import { skillDescriptions, isValidSkill } from "@/skills/skill-registry";
 
 const MODEL = "gemini-flash-lite-latest";
 
@@ -43,6 +43,19 @@ Do not explain your decision.
     },
   });
 
-  console.log("Router result:", response.text);
-  return response.text?.trim() ?? "general";
+  const result = response.text?.trim();
+
+  console.log("Router result:", result);
+
+  if (!result || result === "general") {
+    return "general";
+  }
+
+  if (!isValidSkill(result)) {
+    console.warn(`Router returned unknown skill: ${result}`);
+
+    return "general";
+  }
+
+  return result;
 }
