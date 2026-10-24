@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Barlow_Condensed, Geist, Geist_Mono } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -42,6 +43,7 @@ export default function RootLayout({
         <ClerkProvider>
           {children}
         </ClerkProvider>
+        <Analytics />
       </body>
     </html>
   );
