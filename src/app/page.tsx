@@ -8,7 +8,6 @@ import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import ReactMarkdown from "react-markdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
-import { UserProfile } from "@/types/user-profile";
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
 
@@ -44,7 +43,8 @@ const copy = {
     home: "Inicio de FitCoach AI",
     subtitle: "EN LÍNEA · TU ENTRENADOR PERSONAL",
     title: "PREGÚNTAME SOBRE ENTRENAMIENTO",
-    topics: "Ejercicio · Nutrición · Recuperación · Planificación · Suplementos",
+    topics:
+      "Ejercicio · Nutrición · Recuperación · Planificación · Suplementos",
     conversation: "Conversación con tu entrenador",
     you: "TÚ",
     thinking: "Tu entrenador está pensando…",
@@ -54,7 +54,8 @@ const copy = {
     placeholder: "Pregunta sobre ejercicio, nutrición, recuperación...",
     send: "Enviar mensaje",
     hint: "SHIFT+ENTER PARA UN SALTO DE LÍNEA · ENTER PARA ENVIAR",
-    error: "No se pudo contactar a tu entrenador. Intenta enviar tu mensaje de nuevo.",
+    error:
+      "No se pudo contactar a tu entrenador. Intenta enviar tu mensaje de nuevo.",
     language: "Idioma",
     signIn: "Iniciar sesión",
     signUp: "Crear cuenta",
@@ -74,9 +75,9 @@ export default function Home() {
   const text = copy[language];
   const [messages, setMessages] = useState<Message[]>([]);
   const [message, setMessage] = useState("");
-  const [userProfile, setUserProfile] = useState<UserProfile>({ language: "es" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [conversationId, setConversationId] = useState<string | null>(null);
   const [showSuggestions, setShowSuggestions] = useState(true);
   const conversationRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -101,8 +102,20 @@ export default function Home() {
     setMessage("");
 
     try {
-      const content = await sendChatMessage(updatedMessages, language);
-      setMessages((prev) => [...prev, { role: "assistant", content }]);
+      const result = await sendChatMessage(
+        updatedMessages,
+        language,
+        conversationId ?? undefined,
+      );
+
+      if (result.conversationId) {
+        setConversationId(result.conversationId);
+      }
+
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: result.response },
+      ]);
     } catch (error) {
       console.error(error);
       setMessages(messages);
@@ -121,23 +134,45 @@ export default function Home() {
           <span className="brand-icon" aria-hidden="true">
             <Image src={logo} alt="" sizes="43px" priority />
           </span>
-          <span><span className="brand-name">FITCOACH AI</span><span className="brand-subtitle"><span className="status-dot" />{text.subtitle}</span></span>
+          <span>
+            <span className="brand-name">FITCOACH AI</span>
+            <span className="brand-subtitle">
+              <span className="status-dot" />
+              {text.subtitle}
+            </span>
+          </span>
         </Link>
         <div className="header-controls">
           <Show when="signed-out">
             <SignInButton>
-              <button type="button" className="auth-button">{text.signIn}</button>
+              <button type="button" className="auth-button">
+                {text.signIn}
+              </button>
             </SignInButton>
             <SignUpButton>
-              <button type="button" className="auth-button auth-button-primary">{text.signUp}</button>
+              <button type="button" className="auth-button auth-button-primary">
+                {text.signUp}
+              </button>
             </SignUpButton>
           </Show>
           <Show when="signed-in">
             <UserButton />
           </Show>
-          <select className="language-select" aria-label={text.language} value={language} disabled={loading} onChange={(event) => setLanguage(event.target.value === "es" ? "es" : "en")}>
-            <option value="en" lang="en" aria-label="English">🇬🇧</option>
-            <option value="es" lang="es" aria-label="Español">🇪🇸</option>
+          <select
+            className="language-select"
+            aria-label={text.language}
+            value={language}
+            disabled={loading}
+            onChange={(event) =>
+              setLanguage(event.target.value === "es" ? "es" : "en")
+            }
+          >
+            <option value="en" lang="en" aria-label="English">
+              🇬🇧
+            </option>
+            <option value="es" lang="es" aria-label="Español">
+              🇪🇸
+            </option>
           </select>
         </div>
       </header>
@@ -152,39 +187,122 @@ export default function Home() {
             <p>{text.topics}</p>
           </section>
         ) : (
-          <div className="message-list" role="log" aria-label={text.conversation} aria-live="polite">
+          <div
+            className="message-list"
+            role="log"
+            aria-label={text.conversation}
+            aria-live="polite"
+          >
             {messages.map((msg, index) => (
               <article key={index} className={`chat-message ${msg.role}`}>
-                <span className="message-author">{msg.role === "user" ? text.you : "FITCOACH AI"}</span>
-                <div className="message-content"><ReactMarkdown>{msg.content}</ReactMarkdown></div>
+                <span className="message-author">
+                  {msg.role === "user" ? text.you : "FITCOACH AI"}
+                </span>
+                <div className="message-content">
+                  <ReactMarkdown>{msg.content}</ReactMarkdown>
+                </div>
               </article>
             ))}
-            {loading && <p className="thinking" role="status"><span className="status-dot" />{text.thinking}</p>}
+            {loading && (
+              <p className="thinking" role="status">
+                <span className="status-dot" />
+                {text.thinking}
+              </p>
+            )}
           </div>
         )}
       </div>
 
       <section className="suggestions" aria-label={text.suggestionsLabel}>
-        <button className="suggestions-toggle" type="button" aria-expanded={showSuggestions} aria-controls="suggested-questions" onClick={() => setShowSuggestions(!showSuggestions)}>
-          {text.suggestionsTitle} <svg className={showSuggestions ? "" : "collapsed"} width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        <button
+          className="suggestions-toggle"
+          type="button"
+          aria-expanded={showSuggestions}
+          aria-controls="suggested-questions"
+          onClick={() => setShowSuggestions(!showSuggestions)}
+        >
+          {text.suggestionsTitle}{" "}
+          <svg
+            className={showSuggestions ? "" : "collapsed"}
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
         </button>
-        {showSuggestions && <div className="suggestion-list" id="suggested-questions">
-          {text.suggestions.map((suggestion) => <button type="button" key={suggestion} disabled={loading} onClick={() => { setMessage(suggestion); inputRef.current?.focus(); }}>{suggestion}</button>)}
-        </div>}
+        {showSuggestions && (
+          <div className="suggestion-list" id="suggested-questions">
+            {text.suggestions.map((suggestion) => (
+              <button
+                type="button"
+                key={suggestion}
+                disabled={loading}
+                onClick={() => {
+                  setMessage(suggestion);
+                  inputRef.current?.focus();
+                }}
+              >
+                {suggestion}
+              </button>
+            ))}
+          </div>
+        )}
       </section>
 
       <footer className="composer-area">
-        {error && <p className="chat-error" role="alert">{text.error}</p>}
+        {error && (
+          <p className="chat-error" role="alert">
+            {text.error}
+          </p>
+        )}
         <form onSubmit={handleSubmit} className="composer">
-          <label htmlFor="message-input" className="sr-only">{text.inputLabel}</label>
-          <textarea ref={inputRef} id="message-input" value={message} onChange={(e) => setMessage(e.target.value)} placeholder={text.placeholder} rows={1} readOnly={loading} onKeyDown={(e) => {
-            if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
-              e.preventDefault();
-              e.currentTarget.form?.requestSubmit();
-            }
-          }} />
-          <button className="send-button" type="submit" disabled={loading || !message.trim()} aria-label={text.send} aria-busy={loading}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m21 3-7 18-4-7-7-4 18-7ZM10 14 21 3" /></svg>
+          <label htmlFor="message-input" className="sr-only">
+            {text.inputLabel}
+          </label>
+          <textarea
+            ref={inputRef}
+            id="message-input"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder={text.placeholder}
+            rows={1}
+            readOnly={loading}
+            onKeyDown={(e) => {
+              if (
+                e.key === "Enter" &&
+                !e.shiftKey &&
+                !e.nativeEvent.isComposing
+              ) {
+                e.preventDefault();
+                e.currentTarget.form?.requestSubmit();
+              }
+            }}
+          />
+          <button
+            className="send-button"
+            type="submit"
+            disabled={loading || !message.trim()}
+            aria-label={text.send}
+            aria-busy={loading}
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m21 3-7 18-4-7-7-4 18-7ZM10 14 21 3" />
+            </svg>
           </button>
         </form>
         <p className="keyboard-hint">{text.hint}</p>
