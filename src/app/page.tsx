@@ -1,86 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import logo from "../../public/logo.png";
-import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
-import ReactMarkdown from "react-markdown";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
-import { Message } from "@/types/message";
-import { sendChatMessage } from "@/lib/chat-api";
-import { useChatStore } from "@/stores/chat-store";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+
+import { Button } from "@/components/ui/button";
+import { ChatComposer } from "@/components/chat/chat-composer";
+import { ChatHeader } from "@/components/chat/chat-header";
+import { ChatMessage } from "@/components/chat/chat-message";
+import { SuggestedQuestions } from "@/components/chat/suggested-questions";
 import { useConversation } from "@/hooks/use-conversation";
 import { useConversations } from "@/hooks/use-conversations";
-
-const copy = {
-  en: {
-    home: "FitCoach AI home",
-    subtitle: "ONLINE · YOUR FITNESS COACH",
-    title: "ASK ME ANYTHING FITNESS",
-    topics: "Workouts · Nutrition · Recovery · Programming · Supplements",
-    conversation: "Conversation with your coach",
-    you: "YOU",
-    thinking: "Your coach is thinking…",
-    suggestionsLabel: "Suggested questions",
-    suggestionsTitle: "SUGGESTED QUESTIONS",
-    inputLabel: "Ask your fitness coach",
-    placeholder: "Ask about workouts, nutrition, recovery...",
-    send: "Send message",
-    hint: "SHIFT+ENTER FOR NEW LINE · ENTER TO SEND",
-    error: "Couldn't reach your coach. Please try sending your message again.",
-    language: "Language",
-    signIn: "Sign in",
-    signUp: "Create account",
-    suggestions: [
-      "What's the best split for building muscle 4 days/week?",
-      "How much protein do I actually need?",
-      "How do I break through a deadlift plateau?",
-      "What's a good beginner HIIT routine?",
-      "Should I train fasted or fed for fat loss?",
-      "How long should I rest between sets for hypertrophy?",
-    ],
-  },
-  es: {
-    home: "Inicio de FitCoach AI",
-    subtitle: "EN LÍNEA · TU ENTRENADOR PERSONAL",
-    title: "PREGÚNTAME SOBRE ENTRENAMIENTO",
-    topics:
-      "Ejercicio · Nutrición · Recuperación · Planificación · Suplementos",
-    conversation: "Conversación con tu entrenador",
-    you: "TÚ",
-    thinking: "Tu entrenador está pensando…",
-    suggestionsLabel: "Preguntas sugeridas",
-    suggestionsTitle: "PREGUNTAS SUGERIDAS",
-    inputLabel: "Pregúntale a tu entrenador",
-    placeholder: "Pregunta sobre ejercicio, nutrición, recuperación...",
-    send: "Enviar mensaje",
-    hint: "SHIFT+ENTER PARA UN SALTO DE LÍNEA · ENTER PARA ENVIAR",
-    error:
-      "No se pudo contactar a tu entrenador. Intenta enviar tu mensaje de nuevo.",
-    language: "Idioma",
-    signIn: "Iniciar sesión",
-    signUp: "Crear cuenta",
-    suggestions: [
-      "¿Cómo distribuyo mi entrenamiento para ganar músculo 4 días por semana?",
-      "¿Cuánta proteína necesito realmente?",
-      "¿Cómo supero un estancamiento en peso muerto?",
-      "¿Cuál es una buena rutina de HIIT para principiantes?",
-      "¿Debo entrenar en ayunas o después de comer para perder grasa?",
-      "¿Cuánto debo descansar entre series para ganar masa muscular?",
-    ],
-  },
-};
+import { sendChatMessage } from "@/lib/chat-api";
+import { chatCopy, type ChatLanguage } from "@/lib/chat-copy";
+import { useChatStore } from "@/stores/chat-store";
+import type { Message } from "@/types/message";
 
 export default function Home() {
-  const [language, setLanguage] = useState<"en" | "es">("es");
-  const text = copy[language];
+  const [language, setLanguage] = useState<ChatLanguage>("es");
+  const text = chatCopy[language];
   const [messages, setMessages] = useState<Message[]>([]);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [showSuggestions, setShowSuggestions] = useState(true);
   const conversationRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const { data: conversations } = useConversations();
@@ -108,7 +50,7 @@ export default function Home() {
     );
   }, [activeConversationId, selectedConversation]);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!message.trim() || loading) return;
     setLoading(true);
@@ -146,65 +88,23 @@ export default function Home() {
 
   return (
     <main className="coach-app">
-      <header className="app-header">
-        <Link className="brand" href="/" aria-label={text.home}>
-          <span className="brand-icon" aria-hidden="true">
-            <Image src={logo} alt="" sizes="43px" priority />
-          </span>
-          <span>
-            <span className="brand-name">FITCOACH AI</span>
-            <span className="brand-subtitle">
-              <span className="status-dot" />
-              {text.subtitle}
-            </span>
-          </span>
-        </Link>
-        <div className="header-controls">
-          <Show when="signed-out">
-            <SignInButton>
-              <button type="button" className="auth-button">
-                {text.signIn}
-              </button>
-            </SignInButton>
-            <SignUpButton>
-              <button type="button" className="auth-button auth-button-primary">
-                {text.signUp}
-              </button>
-            </SignUpButton>
-          </Show>
-          <Show when="signed-in">
-            <UserButton />
-          </Show>
-          <select
-            className="language-select"
-            aria-label={text.language}
-            value={language}
-            disabled={loading}
-            onChange={(event) =>
-              setLanguage(event.target.value === "es" ? "es" : "en")
-            }
-          >
-            <option value="en" lang="en" aria-label="English">
-              🇬🇧
-            </option>
-            <option value="es" lang="es" aria-label="Español">
-              🇪🇸
-            </option>
-          </select>
-        </div>
-      </header>
+      <ChatHeader
+        text={text}
+        language={language}
+        loading={loading}
+        onLanguageChange={setLanguage}
+      />
 
       <div>
         <h3>Saved conversations</h3>
 
         {conversations?.map((conversation) => (
-          <button
+          <Button
             key={conversation.id}
-            type="button"
             onClick={() => setActiveConversationId(conversation.id)}
           >
             {conversation.title ?? "Untitled conversation"}
-          </button>
+          </Button>
         ))}
 
         {isConversationPending && activeConversationId && (
@@ -229,14 +129,7 @@ export default function Home() {
             aria-live="polite"
           >
             {messages.map((msg, index) => (
-              <article key={index} className={`chat-message ${msg.role}`}>
-                <span className="message-author">
-                  {msg.role === "user" ? text.you : "FITCOACH AI"}
-                </span>
-                <div className="message-content">
-                  <ReactMarkdown>{msg.content}</ReactMarkdown>
-                </div>
-              </article>
+              <ChatMessage key={index} message={msg} userLabel={text.you} />
             ))}
             {loading && (
               <p className="thinking" role="status">
@@ -248,100 +141,24 @@ export default function Home() {
         )}
       </div>
 
-      <section className="suggestions" aria-label={text.suggestionsLabel}>
-        <button
-          className="suggestions-toggle"
-          type="button"
-          aria-expanded={showSuggestions}
-          aria-controls="suggested-questions"
-          onClick={() => setShowSuggestions(!showSuggestions)}
-        >
-          {text.suggestionsTitle}{" "}
-          <svg
-            className={showSuggestions ? "" : "collapsed"}
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
-          >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </button>
-        {showSuggestions && (
-          <div className="suggestion-list" id="suggested-questions">
-            {text.suggestions.map((suggestion) => (
-              <button
-                type="button"
-                key={suggestion}
-                disabled={loading}
-                onClick={() => {
-                  setMessage(suggestion);
-                  inputRef.current?.focus();
-                }}
-              >
-                {suggestion}
-              </button>
-            ))}
-          </div>
-        )}
-      </section>
+      <SuggestedQuestions
+        text={text}
+        loading={loading}
+        onSelect={(suggestion) => {
+          setMessage(suggestion);
+          inputRef.current?.focus();
+        }}
+      />
 
-      <footer className="composer-area">
-        {error && (
-          <p className="chat-error" role="alert">
-            {text.error}
-          </p>
-        )}
-        <form onSubmit={handleSubmit} className="composer">
-          <label htmlFor="message-input" className="sr-only">
-            {text.inputLabel}
-          </label>
-          <textarea
-            ref={inputRef}
-            id="message-input"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder={text.placeholder}
-            rows={1}
-            readOnly={loading}
-            onKeyDown={(e) => {
-              if (
-                e.key === "Enter" &&
-                !e.shiftKey &&
-                !e.nativeEvent.isComposing
-              ) {
-                e.preventDefault();
-                e.currentTarget.form?.requestSubmit();
-              }
-            }}
-          />
-          <button
-            className="send-button"
-            type="submit"
-            disabled={loading || !message.trim()}
-            aria-label={text.send}
-            aria-busy={loading}
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m21 3-7 18-4-7-7-4 18-7ZM10 14 21 3" />
-            </svg>
-          </button>
-        </form>
-        <p className="keyboard-hint">{text.hint}</p>
-      </footer>
+      <ChatComposer
+        text={text}
+        message={message}
+        loading={loading}
+        error={error}
+        inputRef={inputRef}
+        onMessageChange={setMessage}
+        onSubmit={handleSubmit}
+      />
     </main>
   );
 }
