@@ -5,6 +5,7 @@ import { Barlow_Condensed, Geist, Geist_Mono } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
+import { QueryProvider } from "@/providers/query-provider";
 
 config.autoAddCss = false;
 
@@ -26,7 +27,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FitCoach AI | Your Fitness Coach",
-  description: "Your AI fitness coach for workouts, nutrition, recovery, and training programs.",
+  description:
+    "Your AI fitness coach for workouts, nutrition, recovery, and training programs.",
 };
 
 export default function RootLayout({
@@ -41,7 +43,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ClerkProvider>
-          {children}
+          <QueryProvider>{children}</QueryProvider>
         </ClerkProvider>
         <Analytics />
       </body>
