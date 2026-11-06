@@ -10,6 +10,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import { Message } from "@/types/message";
 import { sendChatMessage } from "@/lib/chat-api";
+import { useChatStore } from "@/stores/chat-store";
+import { useConversation } from "@/hooks/use-conversation";
+import { useConversations } from "@/hooks/use-conversations";
 
 const copy = {
   en: {
@@ -77,10 +80,13 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const [conversationId, setConversationId] = useState<string | null>(null);
   const [showSuggestions, setShowSuggestions] = useState(true);
   const conversationRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const { data: conversations } = useConversations();
+  const { activeConversationId, setActiveConversationId } = useChatStore();
+  const { data: selectedConversation, isPending: isConversationPending } =
+    useConversation(activeConversationId);
 
   useEffect(() => {
     const conversation = conversationRef.current;
@@ -90,6 +96,17 @@ export default function Home() {
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+  useEffect(() => {
+    if (!activeConversationId || !selectedConversation) return;
+
+    setMessages(
+      selectedConversation.messages.map(({ role, content }) => ({
+        role: role as Message["role"],
+        content,
+      })),
+    );
+  }, [activeConversationId, selectedConversation]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -105,11 +122,11 @@ export default function Home() {
       const result = await sendChatMessage(
         updatedMessages,
         language,
-        conversationId ?? undefined,
+        activeConversationId ?? undefined,
       );
 
       if (result.conversationId) {
-        setConversationId(result.conversationId);
+        setActiveConversationId(result.conversationId);
       }
 
       setMessages((prev) => [
@@ -176,6 +193,24 @@ export default function Home() {
           </select>
         </div>
       </header>
+
+      <div>
+        <h3>Saved conversations</h3>
+
+        {conversations?.map((conversation) => (
+          <button
+            key={conversation.id}
+            type="button"
+            onClick={() => setActiveConversationId(conversation.id)}
+          >
+            {conversation.title ?? "Untitled conversation"}
+          </button>
+        ))}
+
+        {isConversationPending && activeConversationId && (
+          <p>Loading conversation...</p>
+        )}
+      </div>
 
       <div className="conversation" ref={conversationRef}>
         {messages.length === 0 ? (
