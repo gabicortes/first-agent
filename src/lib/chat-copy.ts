@@ -21,9 +21,6 @@ export const chatCopy = {
       "What's the best split for building muscle 4 days/week?",
       "How much protein do I actually need?",
       "How do I break through a deadlift plateau?",
-      "What's a good beginner HIIT routine?",
-      "Should I train fasted or fed for fat loss?",
-      "How long should I rest between sets for hypertrophy?",
     ],
   },
   es: {
@@ -50,13 +47,9 @@ export const chatCopy = {
       "¿Cómo distribuyo mi entrenamiento para ganar músculo 4 días por semana?",
       "¿Cuánta proteína necesito realmente?",
       "¿Cómo supero un estancamiento en peso muerto?",
-      "¿Cuál es una buena rutina de HIIT para principiantes?",
-      "¿Debo entrenar en ayunas o después de comer para perder grasa?",
-      "¿Cuánto debo descansar entre series para ganar masa muscular?",
     ],
   },
 };
-
 
 export type ChatLanguage = keyof typeof chatCopy;
 export type ChatCopy = (typeof chatCopy)[ChatLanguage];
