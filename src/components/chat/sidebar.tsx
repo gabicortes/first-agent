@@ -28,7 +28,7 @@ export function ChatSidebar({
           disabled={loading}
           className="sidebar-new-chat"
         >
-          + New Chat
+          <b>+ New Chat</b>
         </Button>
       </div>
 
