@@ -1,4 +1,4 @@
-import { Message } from "@/types/message";
+import type { Message } from "@/types/message";
 
 type ChatResponse = {
   response: string;
@@ -6,9 +6,10 @@ type ChatResponse = {
 };
 
 export async function sendChatMessage(
-  messages: Message[],
-  language: "en" | "es",
+  message: string,
+  language: "en" | "es" = "es",
   conversationId?: string,
+  guestHistory?: Message[],
 ): Promise<ChatResponse> {
   const response = await fetch("/api/chat", {
     method: "POST",
@@ -16,14 +17,19 @@ export async function sendChatMessage(
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      messages,
+      message,
       language,
       conversationId,
+      messages: guestHistory,
     }),
   });
 
   if (!response.ok) {
-    throw new Error("Failed to send message");
+    const error = await response.json();
+
+    console.error("API error:", error);
+
+    throw new Error(error.error ?? "Failed to send message");
   }
 
   return response.json();

@@ -31,8 +31,6 @@ export async function generateResponse(
   const skillName = await routeSkill(messages);
   const selectedSkill = getSkill(skillName);
 
-  console.log("Selected skill:", skillName);
-
   const profileContext = userProfile
     ? `
         Known user profile:
