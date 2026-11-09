@@ -2,14 +2,7 @@
 
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-  type FormEvent,
-} from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@clerk/nextjs";
 
@@ -19,12 +12,15 @@ import { ChatMessage } from "@/components/chat/chat-message";
 import { SuggestedQuestions } from "@/components/chat/suggested-questions";
 import { ChatSidebar } from "@/components/chat/sidebar";
 
+import { useChatScroll } from "@/hooks/use-chat-scroll";
 import { useConversation } from "@/hooks/use-conversation";
 import { useConversations } from "@/hooks/use-conversations";
+
 import { sendChatMessage } from "@/lib/chat-api";
 import { chatCopy, type ChatLanguage } from "@/lib/chat-copy";
 import { useChatStore } from "@/stores/chat-store";
 import type { Message } from "@/types/message";
+import { ChatLoading } from "@/components/chat/chat-loading";
 
 export default function Home() {
   const queryClient = useQueryClient();
@@ -50,12 +46,8 @@ export default function Home() {
     number | null
   >(null);
 
-  // Refs
-  const conversationRef = useRef<HTMLDivElement>(null);
+  // Composer ref
   const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  // Whether automatic scrolling should follow new content
-  const shouldAutoScrollRef = useRef(true);
 
   // Conversations
   const { data: conversations } = useConversations();
@@ -79,67 +71,9 @@ export default function Home() {
   const displayedMessages =
     optimisticMessages ?? (activeConversationId ? savedMessages : messages);
 
-  // --------------------------------------------------
-  // SCROLL MANAGEMENT
-  // --------------------------------------------------
-
-  const scrollToBottom = () => {
-    const conversation = conversationRef.current;
-
-    if (!conversation) return;
-
-    conversation.scrollTop = conversation.scrollHeight;
-  };
-
-  const handleConversationScroll = () => {
-    const conversation = conversationRef.current;
-
-    if (!conversation) return;
-
-    const distanceFromBottom =
-      conversation.scrollHeight -
-      conversation.scrollTop -
-      conversation.clientHeight;
-
-    // Only follow new content if the user is near the bottom.
-    shouldAutoScrollRef.current = distanceFromBottom < 100;
-  };
-
-  // Observe changes to the content height.
-  // This includes the typewriter animation.
-  useLayoutEffect(() => {
-    const conversation = conversationRef.current;
-
-    if (!conversation) return;
-
-    const content = conversation.firstElementChild;
-
-    if (!content) return;
-
-    const observer = new ResizeObserver(() => {
-      if (shouldAutoScrollRef.current) {
-        scrollToBottom();
-      }
-    });
-
-    observer.observe(content);
-
-    if (shouldAutoScrollRef.current) {
-      scrollToBottom();
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [activeConversationId, displayedMessages.length]);
-
-  // Keep the view at the bottom when a new message is submitted
-  // or the loading indicator changes.
-  useEffect(() => {
-    if (shouldAutoScrollRef.current) {
-      scrollToBottom();
-    }
-  }, [displayedMessages.length, loading]);
+  // Scroll management
+  const { conversationRef, handleConversationScroll, resetAutoScroll } =
+    useChatScroll(activeConversationId, displayedMessages.length, loading);
 
   // Update document language
   useEffect(() => {
@@ -151,7 +85,7 @@ export default function Home() {
   // --------------------------------------------------
 
   const handleNewChat = () => {
-    shouldAutoScrollRef.current = true;
+    resetAutoScroll();
 
     setActiveConversationId(null);
     setOptimisticMessages(null);
@@ -162,7 +96,7 @@ export default function Home() {
   };
 
   const handleSelectConversation = (id: string) => {
-    shouldAutoScrollRef.current = true;
+    resetAutoScroll();
 
     setAnimatedMessageIndex(null);
     setOptimisticMessages(null);
@@ -196,8 +130,8 @@ export default function Home() {
 
     const updatedMessages: Message[] = [...currentMessages, userMessage];
 
-    // Start following the latest response.
-    shouldAutoScrollRef.current = true;
+    // Follow the latest response.
+    resetAutoScroll();
 
     // Reset the previous animation.
     setAnimatedMessageIndex(null);
@@ -244,8 +178,6 @@ export default function Home() {
         );
 
         setActiveConversationId(result.conversationId);
-
-        // Clear optimistic state now that the cache is updated.
         setOptimisticMessages(null);
 
         // Synchronize with the database in the background.
@@ -281,10 +213,6 @@ export default function Home() {
     }
   }
 
-  // --------------------------------------------------
-  // RENDER
-  // --------------------------------------------------
-
   return (
     <div className="chat-layout">
       <ChatSidebar
@@ -309,7 +237,7 @@ export default function Home() {
           onScroll={handleConversationScroll}
         >
           {activeConversationId && isConversationPending ? (
-            <p>Loading conversation...</p>
+            <ChatLoading />
           ) : displayedMessages.length === 0 ? (
             <section className="welcome">
               <div className="welcome-icon" aria-hidden="true">

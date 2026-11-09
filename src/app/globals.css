@@ -559,3 +559,60 @@ a:focus-visible {
     display: none;
   }
 }
+
+.chat-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  color: #777;
+}
+
+.chat-loading p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.chat-loading-spinner {
+  font-size: 28px;
+  color: #c7ff00;
+  animation: chat-loading-spin 0.9s linear infinite;
+}
+
+@keyframes chat-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-loading-spinner {
+    animation: none;
+  }
+}
+
+.coach-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.conversation {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.chat-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
