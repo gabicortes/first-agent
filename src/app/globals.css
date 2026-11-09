@@ -616,3 +616,91 @@ a:focus-visible {
   height: 100%;
   min-height: 100%;
 }
+
+.sidebar-conversation-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.sidebar-conversation-row .sidebar-conversation {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.sidebar-delete {
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+
+.sidebar-delete:hover {
+  opacity: 1;
+  color: #dc2626;
+}
+
+.sidebar-conversation-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.sidebar-conversation-row .sidebar-conversation {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  padding-right: 44px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-conversation-row .sidebar-delete {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #aaa;
+
+  opacity: 0;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+
+.sidebar-conversation-row:hover .sidebar-delete,
+.sidebar-conversation-row:focus-within .sidebar-delete {
+  opacity: 1;
+}
+
+.sidebar-conversation-row .sidebar-delete:hover {
+  color: #ef4444;
+  background: #333;
+}
+
+.sidebar-conversation-row .sidebar-delete:disabled {
+  cursor: not-allowed;
+}
+
+@media (hover: none) {
+  .sidebar-conversation-row .sidebar-delete {
+    opacity: 1;
+  }
+}

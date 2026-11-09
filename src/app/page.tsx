@@ -31,6 +31,8 @@ export default function Home() {
     handleNewChat,
     handleSelectConversation,
     handleSubmit,
+    deletingConversationId,
+    handleDeleteConversation,
   } = useChat(language);
 
   const { conversationRef, handleConversationScroll, resetAutoScroll } =
@@ -62,8 +64,10 @@ export default function Home() {
         conversations={conversations}
         activeConversationId={activeConversationId}
         loading={loading}
+        deletingConversationId={deletingConversationId}
         onSelectConversation={onSelectConversation}
         onNewChat={onNewChat}
+        onDeleteConversation={handleDeleteConversation}
       />
 
       <main className="coach-app">

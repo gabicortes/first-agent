@@ -20,6 +20,10 @@ export function useChat(language: ChatLanguage) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const [deletingConversationId, setDeletingConversationId] = useState<
+    string | null
+  >(null);
+
   const [optimisticMessages, setOptimisticMessages] = useState<
     Message[] | null
   >(null);
@@ -155,6 +159,42 @@ export function useChat(language: ChatLanguage) {
     }
   }
 
+  async function handleDeleteConversation(id: string) {
+    if (deletingConversationId || loading) return;
+
+    setDeletingConversationId(id);
+
+    try {
+      const response = await fetch(
+        `/api/conversations/${encodeURIComponent(id)}`,
+        {
+          method: "DELETE",
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to delete conversation");
+      }
+
+      queryClient.removeQueries({
+        queryKey: ["conversation", id],
+      });
+
+      if (activeConversationId === id) {
+        handleNewChat();
+      }
+
+      await queryClient.invalidateQueries({
+        queryKey: ["conversations"],
+      });
+    } catch (error) {
+      console.error("Failed to delete conversation:", error);
+      window.alert("Could not delete conversation. Please try again.");
+    } finally {
+      setDeletingConversationId(null);
+    }
+  }
+
   return {
     message,
     setMessage,
@@ -168,5 +208,7 @@ export function useChat(language: ChatLanguage) {
     handleNewChat,
     handleSelectConversation,
     handleSubmit,
+    deletingConversationId,
+    handleDeleteConversation,
   };
 }
