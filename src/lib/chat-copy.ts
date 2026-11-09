@@ -1,5 +1,13 @@
 export const chatCopy = {
   en: {
+    newChat: "New chat",
+    conversations: "Conversations",
+    chatHistory: "Chat history",
+    savedConversations: "Saved conversations",
+    noConversations: "No conversations yet",
+    untitledConversation: "Untitled conversation",
+    deleteConversation: "Delete conversation",
+    deleteConfirmation: "Are you sure you want to delete this conversation? This action cannot be undone.",
     home: "FitCoach AI home",
     subtitle: "ONLINE · YOUR FITNESS COACH",
     title: "ASK ME ANYTHING FITNESS",
@@ -24,6 +32,14 @@ export const chatCopy = {
     ],
   },
   es: {
+    newChat: "Nuevo chat",
+    conversations: "Conversaciones",
+    chatHistory: "Historial de chats",
+    savedConversations: "Conversaciones guardadas",
+    noConversations: "Todavía no hay conversaciones",
+    untitledConversation: "Conversación sin título",
+    deleteConversation: "Eliminar conversación",
+    deleteConfirmation: "¿Seguro que quieres eliminar esta conversación? Esta acción no se puede deshacer.",
     home: "Inicio de FitCoach AI",
     subtitle: "EN LÍNEA · TU ENTRENADOR PERSONAL",
     title: "PREGÚNTAME SOBRE ENTRENAMIENTO",

@@ -61,6 +61,7 @@ export default function Home() {
   return (
     <div className="chat-layout">
       <ChatSidebar
+        text={text}
         conversations={conversations}
         activeConversationId={activeConversationId}
         loading={loading}
