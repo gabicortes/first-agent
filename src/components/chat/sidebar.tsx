@@ -39,8 +39,6 @@ export function ChatSidebar({
   return (
     <aside className="chat-sidebar" aria-label={text.chatHistory}>
       <div className="sidebar-header">
-        <h2>{text.conversations}</h2>
-
         <Button
           onClick={onNewChat}
           disabled={loading}
