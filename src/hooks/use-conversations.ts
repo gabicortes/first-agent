@@ -29,5 +29,6 @@ export function useConversations() {
   return useQuery({
     queryKey: ["conversations"],
     queryFn: fetchConversations,
+    refetchInterval: 5000,
   });
 }
