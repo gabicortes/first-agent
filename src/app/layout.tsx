@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FitCoach AI | Your Fitness Coach",
+  title: "FitCoach AI",
   description:
     "Your AI fitness coach for workouts, nutrition, recovery, and training programs.",
 };
