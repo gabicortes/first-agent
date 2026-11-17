@@ -1,0 +1,1210 @@
+Hip thrust and back squat training
+elicit similar gluteus muscle
+hypertrophy and transfer similarly
+to the deadlift
+Daniel L. Plotkin
+1
+*, Merlina A. Rodas
+2
+, Andrew D. Vigotsky
+3
+,
+4
+,
+Mason C. McIntosh
+1
+, Emma Breeze
+1
+, Rachel Ubrik
+1
+,
+Cole Robitzsch
+1
+, Anthony Agyin-Birikorang
+1
+,
+Madison L. Mattingly
+1
+, J. Max Michel
+1
+, Nicholas J. Kontos
+1
+,
+Sarah Lennon
+5
+, Andrew D. Frugé
+5
+, Christopher M. Wilburn
+1
+,
+Wendi H. Weimar
+1
+, Adil Bashir
+6
+, Ronald J. Beyers
+6
+,
+Menno Henselmans
+7
+, Bret M. Contreras
+8
+and Michael D. Roberts
+1
+*
+1
+School of Kinesiology, Auburn University, Auburn, AL, United States,
+2
+Department of Psychological
+Sciences, Auburn, AL, United States,
+3
+Departments of Biomedical Engineering and Statistics, Evanston, IL,
+United States,
+4
+Department of Neuroscience, Northwestern University, Chicago, IL, United States,
+5
+College of Nursing, Auburn University, Auburn, AL, United States,
+6
+MRI Research Center, Auburn
+University, Auburn, AL, United States,
+7
+International Scientific Research Foundation for Fitness and
+Nutrition, Amsterdam, Netherlands,
+8
+BC Strength, San Diego, CA, United States
+We examined how set-volume equated resistance training using either the back squat
+(SQ) or hip thrust (HT) affected hypertrophy and various strength outcomes. Untrained
+college-aged participants were randomized into HT (n = 18) or SQ (n = 16) groups.
+Surface electromyograms (sEMG) from the right gluteus maximus and medius
+muscles were obtained during thefirst training session. Participants completed
+9 weeks of supervised training (15–17 sessions), before and after which gluteus
+and leg muscle cross-sectional area (mCSA) was assessed via magnetic resonance
+imaging. Strength was also assessed prior to and after the training intervention via
+three-repetition maximum (3RM) testing and an isometric wall push test. Gluteus
+mCSA increases were similar across both groups. Specifically, estimates [(−)favorsHT
+(+) favors SQ] modestly favored the HTversusSQforlower[effect±SE,−1.6 ± 2.1 cm
+2
+;
+CI
+95%
+(−6.1, 2.0)], mid [−0.5 ± 1.7 cm
+2
+;CI
+95%
+(−4.0, 2.6)], and upper [−0.5 ± 2.6 cm
+2
+;
+CI
+95%
+(−5.8, 4.1)] gluteal mCSAs but with appreciable variance. Gluteus medius +
+minimus [−1.8 ± 1.5 cm
+2
+;CI
+95%
+(−4.6, 1.4)] and hamstrings [0.1 ± 0.6 cm
+2
+;CI
+95%
+(−0.9,
+1.4)] mCSA demonstrated little to no growth with small differences between groups.
+mCSA changes were greater in SQ for the quadriceps [3.6 ± 1.5 cm
+2
+;CI
+95%
+(0.7, 6.4)]
+and adductors [2.5 ± 0.7 cm
+2
+;CI
+95%
+(1.2, 3.9)]. Squat 3RM increases favored SQ [14 ±
+2kg;CI
+95%
+(9, 18),] and hip thrust 3RM favored HT [−26 ± 5 kg; CI
+95%
+(−34,−16)]. 3RM
+deadlift [0 ± 2 kg; CI
+95%
+(−4, 3)] and wall push strength [−7±12N;CI
+95%
+(−32, 17)]
+similarly improved. All measured gluteal sites showed greater mean sEMG amplitudes
+during thefirstbouthipthrustversussquat set, but this did not consistently predict
+gluteal hypertrophy outcomes. Squat and hipthrust training elicited similar gluteal
+hypertrophy, greater thigh hypertrophy in SQ, strength increases that favored exercise
+allocation, and similar deadlift and wall push strength increases.
+KEYWORDS
+hip thrust, back squat, gluteus maximus, strength, hypertrophy
+OPEN ACCESS
+EDITED BY
+Kelly Johnson,
+Coastal Carolina University, United States
+REVIEWED BY
+Simon Walker,
+University of Jyväskylä, Finland
+Zixiang Gao,
+Eötvös Loránd University, Hungary
+*CORRESPONDENCE
+Daniel L. Plotkin,
+dzp0092@auburn.edu
+Michael D. Roberts,
+mdr0024@auburn.edu
+RECEIVED17 August 2023
+ACCEPTED27 September 2023
+PUBLISHED09 October 2023
+CITATION
+Plotkin DL, Rodas MA, Vigotsky AD,
+McIntosh MC, Breeze E, Ubrik R,
+Robitzsch C, Agyin-Birikorang A,
+Mattingly ML, Michel JM, Kontos NJ,
+Lennon S, Frugé AD, Wilburn CM,
+Weimar WH, Bashir A, Beyers RJ,
+Henselmans M, Contreras BM and
+Roberts MD (2023), Hip thrust and back
+squat training elicit similar gluteus muscle
+hypertrophy and transfer similarly to
+the deadlift.
+Front. Physiol.14:1279170.
+doi: 10.3389/fphys.2023.1279170
+COPYRIGHT
+© 2023 Plotkin, Rodas, Vigotsky,
+McIntosh, Breeze, Ubrik, Robitzsch,
+Agyin-Birikorang, Mattingly, Michel,
+Kontos, Lennon, Frugé, Wilburn, Weimar,
+Bashir, Beyers, Henselmans, Contreras
+and Roberts. This is an open-access
+article distributed under the terms of the
+Creative Commons Attribution License
+(CC BY). The use, distribution or
+reproduction in other forums is
+permitted, provided the original author(s)
+and the copyright owner(s) are credited
+and that the original publication in this
+journal is cited, in accordance with
+accepted academic practice. No use,
+distribution or reproduction is permitted
+which does not comply with these terms.
+
+TYPEOriginal Research
+PUBLISHED09 October 2023
+DOI10.3389/fphys.2023.1279170
+
+Introduction
+Resistance training (RT) presents potent mechanical stimuli that
+produce robust biological responses (Egan and Sharples, 2023;
+Roberts et al., 2023). However, RT responses vary considerably
+depending on several training variables. One such variable is
+exercise selection; specifically, different exercises have varying
+mechanical demands that can lead to differences in muscle
+growth, strength, and other related outcomes (Waters et al.,
+1974;Maeo et al., 2021;Zabaleta-Korta et al., 2021;Maeo et al.,
+2022). Practitioners and researchers often rely on functional
+anatomy, basic biomechanics, and acute physiological
+measurements to surmise what adaptations different exercises
+may elicit. The degree to which such surmises can meaningfully
+predict outcomes remains an open question, and recent work casts
+some doubt on theirfidelity.
+The reliance on theory and acute measures to guide exercise
+selection is especially evident in the hip extension exercise literature,
+an area of particular interest with applications in rehabilitation
+(Collings et al., 2023a), aging (Kulmala et al., 2014), performance
+(Miller et al., 2021), and bodybuilding. The roles of various hip
+extensor muscles during different hip extension tasks have been
+studied in several ways, including surface electromyography
+(sEMG), nerve blocks, and musculoskeletal modeling (Boren
+et al., 2011;Brazil et al., 2021;Collings et al., 2023b). Based on
+these acute measures, investigators infer stimulus potency or
+exercise superiority. For instance, previous work investigated
+sEMG amplitudes during two common and contentiously
+contrasted hip extension exercises—the hip thrust and squat—to
+compare muscle function, implying that this relates to subsequent
+adaptations (Contreras et al., 2015;Delgado et al., 2019;Williams
+et al., 2021). Although mean and peak sEMG amplitudes favored hip
+thrusts, the ability of sEMG to predict longitudinal strength and
+hypertrophy outcomes from resistance training interventions was
+recently challenged (Vigotsky et al., 2022). To help overcome some
+sEMG limitations, more sophisticated investigations integrate
+excitation into musculoskeletal models (Collings et al., 2023b).
+Yet, more comprehensive analyses of muscle contributions are
+still limited by their underlying assumptions (Herzog and
+Leonard, 1991), and even perfect modeling of muscle
+contributions presumes a one-to-one relationship between
+tension and adaptations.
+Muscle tension is the primary driver of muscle hypertrophy but
+is unlikely to be its sole determinant. Recent evidence demonstrates
+that RT at long muscle lengths and long-duration static stretching
+can augment hypertrophic outcomes (Warneke et al., 2023),
+suggesting other factors may modulate anabolic signaling. It is
+unknown to what extent muscle tension may interact with
+position-specific anabolic signaling and other variables to
+contribute to the anabolic response and how this interaction may
+change under different conditions. Regarding the squat and hip
+thrust, the former has a steeper hip extension resistance curve with a
+relatively greater emphasis in hipflexion (Lahti et al., 2019;Brazil
+et al., 2021), which may confer a more potent gluteal training
+stimulus. However, this notion assumes proportional force
+sharing among the hip extensors, but contributions shift
+throughout the range of motion, clouding inferences. This
+highlights that longitudinal predictions necessitate assumptions
+about how motor systems satisfy the mechanical constraints
+imposed by each exercise and subsequent biological responses, it
+is difficult to infer the potency of the hypertrophic stimulus using
+indirect measures. We ultimately need longitudinal data to
+understand and accurately forecast longitudinal outcomes from
+individual movements.
+Direct evidence is presently needed to compare the
+outcomes of various exercises. Therefore, the purpose of this
+study was to examine how RT using either the barbell squat or
+barbell hip thrust on a set-volume equated basis affected gluteus
+maximus, medius, and minimus muscle hypertrophy
+(determined by MRI) and various strength outcomes
+including the back squat, hip thrust, deadlift, and isometric
+wall push. As a secondary outcome, we sought to determine how
+these exercises affected gluteus maximus/medius muscle
+excitation patterns using sEMG and if sEMG amplitudes
+forecasted hypertrophy.
+Materials and methods
+Ethical considerations and participant
+recruitment
+Before commencing study procedures with human
+participants, this study was approved by the Auburn
+University Institutional Review Board (protocol #: 22-588). All
+approved study procedures followed the latest revisions to the
+Declaration of Helsinki (2013) except for being pre-registered as
+a clinical trial on an online repository. Inclusion criteria were as
+follows: (a) between the ages of 18–30 years old with a body mass
+index (body mass/height
+2
+) of less than 30, have minimal
+experience with resistance training, averaging less than or
+equivalent to 1 day per week for the last 5 years; (c) have not
+been actively participating in any structured endurance training
+program (e.g., running or cycling) for more than 2 days per week
+over the past 6 months; (d) free of any known overt
+cardiovascular or metabolic disease; (e) have not consumed
+supplemental creatine, and/or agents that affect hormones
+(testosterone boosters, growth hormone boosters,etc.)within
+the past 2 months, f) free of any medical condition that would
+contraindicate participation in an exercise program, (g) do not
+have conditions which preclude performing an MRI scan (e.g.,
+medically-implanted devices), h)and free of allergies to lactose or
+intolerances to milk derived products that would contraindicate
+ingestion of whey protein. Eligible participants who provided
+verbal and written consent partook in the testing and training
+procedures outlined in the following paragraphs.
+Study design overview
+An overview of the study design can be found inFigure 1.
+Participants performed two pre-intervention testing visits, one in a
+fasted state for body composition and MRI assessments and the
+other in a non-fasted state for strength assessments. These visits
+occurred in this sequence ~48 h apart; after the pre-intervention
+strength visit, participants were randomly assigned to one of two
+
+experimental groups, includingthe barbell back squat (SQ) or
+barbell hip thrust (HT) groups. Two days following the pre-
+intervention strength testing, all participants partook in theirfirst
+workout, which served to record right gluteal muscle excitation
+via sEMG during one set of 10 repetitions for both the SQ and HT
+exercises. Thereafter, participants engaged in 9 weeks of
+resistance training (2 days per week). Seventy-2 hours
+following the last training bout, participants performed two
+post-intervention testing visits with identical timing and
+protocols as pre-testing.
+Body composition and MRI assessments
+Body composition
+Participants were told to refrain from eating for 8 h prior to
+testing, eliminate alcohol consumption for 24 h, abstain from
+strenuous exercise for 24 h, and to be well hydrated for testing.
+Upon arrival participants submitted a urine sample (~50 mL) for
+urine specific gravity assessment (USG). Measurements were
+performed using a handheld refractometer (ATAGO; Bellevue,
+WA, United States), and USG levels in all participants
+were≤1.020, indicating sufficient hydration. Participants’heights
+were measured using a stadiometer and body mass was assessed
+using a calibrated scale (Seca 769; Hanover, MD, United States) with
+body mass being collected to the nearest 0.1 kg and height to the
+nearest 0.5 cm. Body composition was then measured by
+bioelectrical impedance spectroscopy (BIS) using a 4-lead (two
+hands, two feet) SOZO device (ImpediMed Limited, Queensland,
+Australia) according to the methods described by Moon et al. (Moon
+et al., 2008). Our laboratory has previously shown these methods to
+produce test-retest intraclass correlation coefficients
+(ICC
+3,1
+)>0.990 for whole body intracellular and extracellular
+water metrics on 24 participants (Haun et al., 2018), and this
+device provided estimates of fat free mass, skeletal muscle mass,
+and fat mass.
+MRI measurements
+MRI testing assessed the muscle cross-sectional area (mCSA)
+of both glutei maximi. Upon arriving to the Auburn University
+MRI Research Center, participants were placed onto the patient
+table of the MRI scanner (3T SkyraFit system; Siemens, Erlangen,
+Germany) in a prone position with a ~5-min latency period
+before scanning was implemented. A T1-weighted turbo spin
+echo pulse sequence (1,400 m repetition time, 23 ms echo time,
+in-plane resolution of 0.9 × 0.9 mm
+2
+)wasusedtoobtain
+transverse image sets. 71 slices were obtained with a slice
+thickness of 4 mm with no gap between slices. Measurements
+were taken by the same investigator (R.J.B.) for all scans who did
+not possess knowledge of the training conditions for each
+participant.
+Following the conclusion of the study, MRI DICOMfiles were
+preprocessed using Osirix MD software (Pixmeo, Geneva,
+Switzerland), and these images were imported into ImageJ
+(National Institutes of Health; Bethesda, MD, United States)
+whereby the polygon function was used to manually trace the
+borders of muscles of interest to obtain mCSA. For all
+participants, image standardization was as follows: (a) the middle
+of the gluteus maximus was standardized at the image revealing the
+top of the femur, (b) the image that was 10 slices upward from this
+mark was considered to be the upper gluteus maximus, (c) the image
+that was 18 slices downward from the top of the femur was
+considered lower gluteus maximus, (d) gluteus medius and
+minimus mCSAs were ascertained at the upper gluteus maximus
+image, and (e) combined quadriceps (vastii and rectus femoris),
+adductors (brevis, longus, and magnus), and combined hamstrings
+(biceps femoris, semitendinosus, semimembranosus) mCSAs were
+ascertained at thefirst transverse slice distal to the last portion of the
+lower gluteus maximus. When drawing borders to quantify
+muscles of interest, care was taken to avoid fat and connective
+tissue. Certain muscles were grouped (i.e., gluteus medius +
+minimus, combined quadriceps muscles, combined adductor
+muscles, combined hamstringsmuscles) due to inconsistent
+and poorly delineated muscle borderswithinparticipants.All
+left- and right-side gluteus muscles were summed to provide
+bilateral mCSA values at each site. Alternatively, thigh
+musculature mCSA values were yielded from the averages of
+the left and right legs. This method was performed on the thigh
+because ~10% of participants yielded either left or right thigh
+images that presented visual artifacts from the edge of the MRI
+receiving coil. In these situations, thigh musculature from only
+one of the two legs was quantified.
+FIGURE 1
+Study design overview Legend: Figure depicts study design overview described in-text. Abbreviations: PRE, pre-intervention testing visit; POST,
+post-intervention testing visit; HT, barbell hip thrust; SQ, barbell squat; body comp., body composition testing using bioelectrical impedance
+spectroscopy; MRI, magnetic resonance imaging; sEMG, surface electromyography.
+
+Strength assessments
+Isometric muscle strength (wall push)
+Participants reported to the laboratory (non-fasted) having
+refrained from any exercise other than activities of daily living
+for at least 48 h before baseline testing. A tri-axial force plate
+(Bertec FP4060-10-2000; Columbus, OH, United States) with an
+accompanying amplifier (Bertec model # AM6800) sampling at
+1,000 Hz was used to measure horizontal force production in
+newtons N) during a wall push test. The distance from the force
+plate to the wall was positioned such that when the subjects’
+forearms were parallel with the ground, the torso was at a ~45
+°
+angle with the ground and one rear foot was in contact with the force
+plate. Hand placement was standardized by distance from the
+ground and foot placement was standardized by distance from
+the wall. The subject was instructed to push, using the dominant
+leg, as hard as possible into the wall while keeping the torso at 45
+°
+(Figure 2). Two wall pushes were performed for 3 s each, with each
+repetition being separated by 2 m of rest. The highest peak
+horizontal force from these two tests was used for analysis.
+Dynamic muscle strength
+Following wall push testing, dynamic lower body strength was
+assessed by three-repetition maximum (3RM) testing for the barbell
+back squat, barbell hip thrust, and barbell deadlift exercises. Notably,
+our laboratory has extensively performed 3RM dynamic strength
+testing on numerous occasions in untrained and trained participants
+(Mobley et al., 2018;Vann et al., 2020;Godwin et al., 2023;Smith
+et al., 2023). Briefly, specific warm-up sets for each exercise consisted
+of coaching participants through the movement patterns and
+gauging comfort and movement proficiency. Subsequent warm-
+ups for each exercise were chosen with an attempt at
+approximating 5 repetitions at ~50% 1RM for one set and
+2–3 repetitions at ~60–80% 1RM for two additional sets.
+Participants then performed sets of three repetitions with
+incremental increases in load for 3RM determinations for each
+exercise and 3 m of rest was given between each successive
+attempt. For all exercises, participants were instructed to perform
+repetitions in a controlled fashion, with a concentric action of
+approximately 1 s and an eccentric action of approximately 2 s.
+All three exercises were performed with feet spaced 1–1.5-times
+shoulder width apart. For the barbell squat, depth was set to when
+the femur was parallel to thefloor, with all but one participant
+achieving a depth at or below this point. For the barbell hip thrust,
+the hip thrust apparatus (Thruster 3.0, BC Strength; San Diego, CA,
+United States) was set to a height at which participants could make
+brief contact with the ground with the weight plate (21”) and hips at
+the bottom of each repetition. Repetitions were considered properly
+executed when the participant’s tibia was perpendicular to thefloor
+and the femur was parallel to thefloor. Torso position was
+sufficiently maintained to avoid excessive motion through the
+pelvis. For the barbell deadlift, participants began repetitions
+from thefloor and were prompted to maintain the torso position
+throughout the execution of the lift. A lift was deemed successful
+once participants stood upright with full knee and hip extensions.
+sEMG measurements during thefirst training
+bout
+Subjects were asked to wear loose athletic attire to access the
+EMG electrode placement sites. Before placing the electrodes on the
+skin, if necessary, excess hair was removed with a razor, and the skin
+was cleaned and abraded using an alcohol swab. After preparation,
+double-sided adhesives were attached to wireless sEMG electrodes
+(Trigno system; Delsys, Natick, MA, United States), where were
+placed in parallel to thefibers of the right upper gluteus maximus,
+mid gluteus maximus, lower gluteus maximus, and gluteus medius
+FIGURE 2
+Wall push demonstration. Legend: Figure depicts the wall push test with one of the co-authors (M.D.R.) and shows force tracing.
+
+(seeFigure 4AinResults). Upper and middle gluteus maximus
+electrodes were placed based on the recommendations of Fujisawa
+and others (Fujisawa et al., 2014), albeit we considered the lower
+gluteus maximus as middle. The upper gluteus maximus electrodes
+were placed superior and lateral to the shortest distance between the
+posterior superior iliac spine (PSIS) and the posterior greater
+trochanter, and the middle gluteus maximus electrodes were
+placed inferior and medial to the shortest distance between the
+PSIS and the posterior greater trochanter. Lower gluteus maximus
+electrodes were placed one inch (2.54 cm) above the most medial
+presentation of the gluteal fold. If it was ambiguous as to whether an
+appreciable amount of muscle tissue existed in this lower region, the
+participant was asked to contract the area and palpation was used to
+confirm proper placement. Gluteus medius electrodes were placed
+over the proximal third of the distance between the iliac crest and the
+greater trochanter. After the electrodes were secured, a quality check
+was performed to ensure sEMG signal validity. Following electrode
+placement, maximum voluntary isometric contraction (MVIC)
+testing was performed immediately prior to 10RM testing. For
+the gluteus maximus, the MVIC reference was a prone bent-leg
+hip extension against manual resistance applied to the distal thigh, as
+used by Boren and others (Boren et al., 2011). For the gluteus medius
+MVIC, participants laid on their side with a straight leg and
+abducted against manual resistance. Care was taken not to
+depress the joint of interest during manual testing. In all MVIC
+positions, participants were instructed to contract the tested muscle
+as hard as possible. After 5 m of rest following MVIC testing, all
+participants performed one set of ten repetitions utilizing estimated
+10RM loads for both the barbell back squat and the barbell hip thrust
+exercises. The exercise form and tempo used were the same as
+described in the strength testing section above. During both sets,
+muscle excitation of the upper/middle/lower gluteus maximus and
+gluteus medius were recorded with the wireless sEMG system
+whereby electrodes were sampled at 1,000 Hz. Participants
+allocated to HT training performed the squat setfirst followed by
+the hip thrust set. Participants allocated to SQ training performed
+the hip thrust setfirst followed by the back squat set. Following these
+two sEMG sets, the wireless sEMG electrodes were removed.
+Participantsfinished the session with two more sets of
+8–12 repetitions using the calculated 10RM load for the exercise
+allocated to them for the intervention.
+Signal processing was performed using software associated with
+the sEMG system (Delsys EMGworks Analysis v4.7.3.0; Delsys).
+sEMG signals from the MVICs and 10RM sets of back squat and hip
+thrust werefirst rectified. Signals were then processed with a second-
+order digital low-pass Butterworthfilter, with a cutoff frequency of
+10 Hz, and further smoothed using a root mean square moving
+window of 250 m. The average of the middle 3 s of thefiltered MVIC
+time series was then used to normalize the squat and hip thrust data
+for each site. Data were then visually inspected forfidelity before
+calculating the mean and peak sEMG values. Partial sequences of
+sEMG data were removed in the rare event that tempo was irregular
+or not maintained, or if a brief artifact was introduced. Final EMG
+data are presented as mean and peak sEMG amplitudes during the
+hip thrust and back squat 10RM sets. sEMG issues were only evident
+for a small portion (seeResults) of the 34 participants whofinished
+the intervention. Data were dropped from analyses due to artifacts
+produced through either electrode slippage or sEMG electrode
+jarring during the 10RM sets, leading to persistent distortion. In
+this regard, sample sizes for each muscle site are presented in the
+results section.
+Resistance training procedures
+The RT protocol consisted of 3–6 sets per session of barbell hip
+thrusts for HT participants or barbell back squats for SQ
+participants. Excluding thefirst week, which consisted of one
+session, all remaining weeks consisted of two sessions per week
+on non-consecutive days for 9 weeks. Week-to-week set schemes per
+session were as follows: week 1, 3 sets; week 2, 4 sets; weeks 3–6,
+5 sets; weeks 7–9, 6 sets. The repetition range was set to
+8–12 repetitions; if a participant performed less than
+8 repetitions or more than 12 repetitions, the load was adjusted
+accordingly. D.L.P. and 1–2 other co-authors supervised all sessions,
+during which participants were verbally encouraged to perform all
+sets to the point of volitional muscular failure, herein defined as the
+participants being unable to volitionally perform another concentric
+repetition while maintaining proper form. Again, the exercise form
+and tempo used were the same as described in the strength testing
+section above; however, squat repetitions were not limited to a depth
+corresponding to the femur parallel to thefloor but rather the lowest
+depth achievable. Outside of these supervised training sessions,
+participants were instructed to refrain from performing any other
+lower-body RT for the duration of the study. Participants could miss
+a maximum of 2 sessions and still be included in the analysis.
+Dietary instructions during the study
+Participants were given containers of a whey protein supplement
+(Built with Science; Richmond, BC, Canada) and were instructed to
+consume one serving per day (per serving: 29 g protein, 1 g
+carbohydrate, 0.5 g fat, 130 kcal). This was done in the hope of
+diminishing inadequate protein intake as a confounding variable.
+Other than this guidance, participants were advised to maintain
+their customary nutritional regimens to avoid other potential dietary
+confounders.
+All participants were instructed to provide 4-day food logs
+(2 weeks days, 2 weekend days) during thefirst and last weeks of
+the intervention. A registered dietician (A.D.R.) oversaw food log
+analyses using The Nutrition Data System for Research (NDSR;
+NDSR 2014; University of Minnesota) food log entry and analyses
+(Schakel, 2001). Calories and macronutrients from each time point
+represent the 4-day average for the respective food log dates.
+Notes on randomization and blinding
+Investigators were blinded to group allocation during the MRI
+scan and its analysis. Participants were not blinded to group
+allocation as exercise comparisons were not amenable to
+blinding. Due to logistical constraints investigators were not
+blinded to group allocation during strength testing and, thus,
+bias cannot be completely ruled out in this context.
+Randomization into SQ and HT groups was performed via a
+
+random number generator in blocks of 2 or 4 as participants
+consented.
+Statistics andfigure construction
+Data were analyzed in Jamovi v2.3 (https://www.jamovi.org)
+and R (version 4.3.0). We performed three different sets of
+analyses.
+First, we compared mean and peak HT and SQ sEMG
+amplitudes from thefirst training session, for which we
+performed pairedt-tests.
+Second, we compared the longitudinal effects of HT and SQ
+training on mCSA and strength. Notably, baseline and within-
+group inferential statistics were not calculated, as baseline
+significance testing is inconsequential (Senn, 1994)and
+within-group outcomes are not the subject of our research
+question (Bland and Altman, 2011). However, we descriptively
+present within-group changes to help contextualize ourfindings.
+The effect of group (SQversusHT) on each outcome variable was
+estimated using linear regression, in which post-intervention
+scores were the response variable, group was dummy-coded
+0 for SQ and 1 for HT, and the pre-intervention score was
+included as a covariate of no interest (Vickers and Altman,
+2001). The model output can thus be interpreted as the
+expected difference in post-intervention (or mathematically
+equivalently, change) scores between the SQ and HT groups
+for a given pre-intervention score. We used the bias-corrected
+and accelerated stratified bootstrap with 10,000 replicates to
+calculate 95% compatibility intervals (CIs).
+Third, we investigated the extent to which sEMG amplitudes
+from thefirst session forecasted growth. There are multiple ways
+this question could be posed, andsince claims surrounding sEMG
+amplitude’s predictive power are ambiguous, we addressed each of
+the following questions: i) Do individuals with greater sEMG
+amplitudes grow more than individuals with lower sEMG
+amplitudes? For this, we calculated a Pearson correlation for
+each muscle using changes in mCSA and the sEMG amplitudes.
+ii) Do regions or muscles with greater sEMG amplitudes grow
+morethanregionsormuscleswithlowersEMGamplitudes?For
+this, we used a linear mixed-effects model in which ln (mCSA
+post
+/
+mCSA
+pre
+) was the response variable; sEMG amplitude, group, and
+their interaction werefixed effects; and we permitted intercepts
+and slopes for sEMG amplitude tovary across subjects. Since we
+are interested in generalizable predictions, we calculated
+prediction intervals for the slopes by calculating a Wald interval
+using the sum of the parameter variance and random effects
+variance. iii) Can the differences in growth elicited from
+different exercises be accounted for by sEMG amplitude? For
+this, we calculated the so-called“indirect effect”of sEMG
+amplitude, which represents the extent to which the group
+effect on hypertrophy can be explained by sEMG amplitudes.
+This was done the same way a typical“mediation analysis”is
+done (although, this should not be viewed as causal here)—we
+bootstrapped the difference between the group effect (SQ vs HT)
+when sEMG was not in the model and when sEMG was added to
+the model. If group-based sEMG differences accounted for group-
+based hypertrophy differences, then the effect of group on growth
+would shrink towards 0 and sEMG would absorb the variance in
+growth.
+Finally, self-reported food log data (kcal/d, protein g/d,
+carbohydrate g/d, and fat g/d) were analyzed using two-way
+repeated measures ANOVAs.
+Figures were constructed using Microsoft PowerPoint and
+through paid site licenses for BioRender (https://www.biorender.
+com), GraphPad Prism v9.2.0 (San Diego, CA, United States), and
+ggplot2.
+Results
+Consort and general baseline participant
+characteristics
+The CONSORT diagram is presented inFigure 3. In total, 18 HT
+and 16 SQ participants completed the study and were included in
+data analyses unless there were technical issues precluding the
+inclusion of data (e.g., sEMG signal distortion).
+General baseline characteristics of the 18 HT participants who
+finished the intervention were as follows: age: 22 ± 3 years old, 24 ±
+3 kg/m
+2
+, 5 M and 13 F. Baseline characteristics of the 16 SQ
+participants whofinished the intervention were as follows: age:
+24 ± 4 years old, 23 ± 3 kg/m
+2
+, 6 M and 10 F. Also notable, the HT
+participants missed an average of 0.8 ± 0.4 workouts during the
+study, and the SQ participants missed 0.8 ± 0.5.
+Self-reported food log data between groups
+Most participants reported 4 days at during thefirst and last
+weeks of the study with the following exceptions: i) two SQ
+participants reported 3 days only with thefirst food log, ii) two
+SQ participants were missing last-week food logs, and iii) one HT
+participant did not turn in thefirst food log. Thus, food log data were
+analyzed for n = 15 SQ and n = 16 HT participants. No group x time
+(G x T) interactions were evident for any of the assessed variables
+(data not shown).
+First bout sEMG results
+sEMG data obtained from the right gluteus muscles during
+thefirst workout bout, based on one set of 10RM hip thrust and
+one set of 10RM squat, are presented inFigure 4.Allsitesshowed
+greater mean sEMG values during the hip thrustversussquat set
+(p<0.01 for all;Figure 4B). Peak sEMG values were greater for
+the upper and middle gluteus maximus (p<0.001 andp= 0.015,
+respectively), whereas small differences existed for the lower
+gluteus maximus or gluteus medius sites (Figure 4B). The
+number of repetitions completed during the 10RM sets used
+for sEMG recordings were not different between exercises (back
+squat: 9 ± 1 repetitions, hip thrust: 9 ± 2 repetitions).
+
+Gluteus musculature mCSAs according
+to MRI
+The effect of SQ relative to HT for left + right mCSA was
+negligible across gluteal muscles (Figures 5A–D). Point estimates
+modestly favored HT for lower [effect ±SE,−1.6 ± 2.1 cm
+2
+;CI
+95%
+(−6.1, 2.0)], mid [−0.5 ± 1.7 cm
+2
+;CI
+95%
+(−4.0, 2.6)], and upper
+[−0.5 ± 2.6 cm
+2
+;CI
+95%
+(−5.8, 4.1)] gluteal mCSAs; these point
+estimates were dwarfed by the variance. Left + right mCSA
+values for the gluteus medius + minimus demonstrated a lesser
+FIGURE 3
+CONSORT diagram Figure depicts participant numbers through various stages of the intervention. All participants were included in data analysis
+unless there were technical issues precluding the inclusion of data (e.g., EMG distortion).
+FIGURE 4
+Surface electromyography (sEMG) amplitudes during the back squat and barbell hip thrust. Legend: During thefirst session, all participants
+performed both back squats and barbell hip thrusts while we recorded sEMG amplitudes.(A)Representative sEMG electrode placement is depicted on a
+co-author in panel.(B)Data depict mean (left) and peak (right) sEMG amplitudes during one 10RM set of hip thrusts and one 10RM set of back squats. As
+34 participants partook in this test, sample sizes vary due to incomplete data from electrode slippage or distortion. Bars are mean ± SD, and individual
+participant values are depicted as dots.(C)Representative data from one participant.
+
+FIGURE 5
+Gluteus musculature mCSA changes following back squat and barbell hip thrust training, assessed using MRI. Legend: Figure depicts change
+adjusted for pre-intervention scores for MRI-derived muscle cross-sectional area (mCSA).(A)left + right (L + R) upper gluteus maximus,(B)L + R middle
+gluteus maximus,(C)L + R lower gluteus maximus, and(D)L + R gluteus medius + minimus. Data include 18 participants in the hip thrust group and
+16 participants in the back squat group. Graphs contain change scores with individual participant values depicted as dots.(E)Three pre and post
+representative MRI images are presented from the same participant with white polygon tracings of the L + R upper gluteus maximus and gluteus medius +
+minimus (top), L + R middle gluteus maximus (middle), and L + R lower gluteus maximus (bottom).
+FIGURE 6
+Thigh musculature mCSA changes following back squat and barbell hip thrust training, assessed using MRI. Legend: Figure depicts change adjusted
+for pre-intervention scores for MRI-derived muscle cross-sectional area (mCSA). Left and/or right(A)quadriceps,(B)adductors, and(C)hamstrings. Data
+include 18 participants in the hip thrust group and 16 participants in the back squat group. Bar graphs contain change scores with individual participant
+values depicted as dots.(D)A representative pre- and post-intervention MRI image is presented with white polygon tracings of the quadriceps
+(denoted as Q), adductors (denoted as ADD), and hamstrings (denoted as H).
+
+magnitude of growth, with a point estimate that also modestly
+favored HT albeit with appreciable variance [−1.8 ± 1.5 cm
+2
+;
+CI
+95%
+(−4.6, 1.4)].
+Thigh musculature mCSAs according to MRI
+Compared to HT, SQ produced greater mCSA growth for
+quadriceps [3.6 ± 1.5 cm
+2
+;CI
+95%
+(0.7, 6.4),Figure 6A] and
+adductors [2.5 ± 0.7 cm
+2
+;CI
+95%
+(1.2, 3.9),Figure 6B]. However,
+hamstrings growth was equivocal across both conditions, yielding
+negligible between-group effects [0.1 ± 0.6 cm
+2
+;CI
+95%
+(−0.9, 1.4),
+Figure 6C].
+Strength outcomes
+Strength outcomes of SQ relative to HT favored respective group
+allocation for specific lift 3RM values. Specifically, Squat 3RM
+favored SQ [14 ± 2 kg; CI
+95%
+(9, 18),Figure 7A], and hip thrust
+3RM favored HT [−26 ± 5 kg; CI
+95%
+(−34,−16),Figure 7B]. Results
+were more equivocal for the deadlift 3RM [0 ± 2 kg; CI
+95%
+(−4, 3),
+Figure 7C] and wall push [−7 ± 12 N; CI
+95%
+(−32, 17),Figure 7D].
+Forecasting training-induced gluteus
+muscle mCSA changes with sEMG
+amplitudes
+Across-subject correlations
+sEMG amplitude’s ability to forecast muscle growth across-
+subjects was generally poor and variable. Mean sEMG amplitudes
+produce negligible to moderate correlations for lower [r=0.18
+(−0.30, 0.57)], middle, [r=−0.03 (−0.32, 0.25)], upper [r=0.50
+(0.03, 0.81)], and medius + minimus [r=0.28 (0, 0.53)]. We
+observed similar results for peak sEMG amplitudes from the
+lower [r=0.13 (−0.16, 0.46)], middle [r=−0.03 (−0.33, 0.21)],
+upper [r=0.32 (−0.05, 0.62)], and medius + minimus [r=0.24
+(−0.02, 0.48)].
+Across-region correlations
+Wefit two linear mixed-effects models to assess how differences
+in sEMG amplitudes across muscles can account for regional
+growth. Since the response variable was change in muscle size on
+the log scale, the exponentiated coefficients can be interpreted as the
+increase in muscle relative to baseline for each additional %MVIC;
+notably, this effect is multiplicative rather than additive. Thefirst
+model, which used mean sEMG amplitudes, produced small and
+variable estimates for both SQ [1.003, PI
+95%
+(0.998, 1.008)] and HT
+[1.002, PI
+95%
+(0.997, 1.006)] groups. The second model, which used
+peak sEMG amplitudes, produced even more modest results for both
+the SQ [1.0003, PI
+95%
+(0.9997, 1.0009)] and HT [1.0002, PI
+95%
+(0.9996, 1.0007)] groups.
+Across-exercise variance
+Mean sEMG amplitude’s ability to capture the group effects was
+inconsistent for lower [indirect effect =−0.55, CI
+95%
+(−3.87, 0.58)],
+middle [0.06, CI
+95%
+(−0.82, 1.56)], upper [−2.98, CI
+95%
+(−8.73,−0.38)], and medius + minimus [−0.73, CI
+95%
+(−2.70,
+0.14)]. We observed similar results for peak sEMG amplitudes
+for lower [−0.08, CI
+95%
+(−2.27, 0.59)], middle [0.22, CI
+95%
+(−1.63,
+1.89)], upper [−3.04, CI
+95%
+(−8.32, 0.15)], and medius + minimus
+[−0.86, CI
+95%
+(−2.47, 0)]. These estimates can be compared to the
+group effects (“total effects”) earlier in the Results.
+FIGURE 7
+Strength outcomes following back squat and barbell hip thrust training. Legend: Figure depicts change adjusted for pre-intervention scores for(A)
+3RM barbell back squat values,(B)3RM barbell hip thrust values,(C)3RM barbell deadlift values, and(D)wall push as demonstrated inFigure 2. Data
+include 18 participants in the hip thrust group and 16 participants in the back squat group.
+
+Discussion
+To further our understanding of hip extensor exercises and the
+validity of relying on theory and acute physiological measures for
+exercise selection, here we acutely (sEMG) and longitudinally
+(hypertrophy, strength) compared two common hip extension
+exercises: the back squat and barbell hip thrust. Acutely, HT
+sEMG amplitudes were generally greater for the HT. However,
+this did not appear to translate and accurately capture
+longitudinal adaptations. Across all gluteus muscle hypertrophy
+outcomes, SQ and HT training yielded modest differences but
+meaningful growth occurring, except in the gluteus medius and
+minimus. Thigh hypertrophy outcomes favored SQ in the adductors
+and quadriceps, with no meaningful growth in either group in the
+hamstrings. Strength outcomes indicated that hip thrust 3RM
+changes favored HT, back squat 3RM changes favored SQ, and
+other strength measures similarly increased in both groups. sEMG
+amplitudes could not reliably predict hypertrophic outcomes across
+several analytical approaches. In the following paragraphs, we
+discuss these results in the context of available evidence and
+speculate on their potential implications for exercise prescription.
+Hypertrophy outcomes
+The primaryfinding of interest was that upper, middle, and
+lower gluteus maximus muscle hypertrophy was similar after
+9 weeks of training with either the squat or hip thrust. This may
+seem to run counter to the notion that muscle tension in lengthened
+positions augments growth (Kassiano et al., 2023b), since the
+sticking region for the squat occurs in greater hipflexion as
+compared to the hip thrust. Importantly, much of the previous
+work on this topic is in muscles being worked in a more isolated
+fashion (Maeo et al., 2021;Maeo et al., 2022). Thus, the equivocal
+findings may suggest that the context in which the muscle is
+experiencing lengthened loading critically determines subsequent
+adaptations. Muscle contributions, and not just positions, may need
+to be jointly considered in determining whether superior
+hypertrophy outcomes would be achieved. This idea is loosely
+supported by sEMG and musculoskeletal modeling research,
+suggesting the gluteus maximus may not be strongly recruited
+toward the bottom of the squat (Contreras et al., 2015;Chiu
+et al., 2017;Kassiano et al., 2023a). This notion would suggest
+the nervous system may not strongly recruit the gluteus maximus
+while at its longest length in the squat, and synergist muscle
+involvement could be precluding the maximum benefits of
+stretch-augmented hypertrophy.
+In addition to motor control governing how the gluteus
+maximus contributes to and adapts from the squat, there are
+study-specific considerations. Both exercises may stimulate
+similar muscle hypertrophy in untrained populations given that
+RT in general elicits rapid growth early on, potentially creating a
+ceiling effect on growth rate and thus observed growth. Alternatively
+stated, skeletal muscle hypertrophy in novice trainees may be less
+influenced by nuances in exercise selection. Notwithstanding, our
+results suggest that a 9-week set-equated training program with
+either the hip thrust, or squat elicits similar gluteal muscle
+hypertrophy in novice trainees.
+Finally, our data show that thigh hypertrophy favored the squat,
+whereas thigh hypertrophy was minimal in the hip thrust. This is
+perhaps unsurprising and is consistent with previous literature. The
+adductors, particularly the adductor magnus, have the largest
+extension moment contribution at the bottom of a squat. Thus,
+the nervous system may favor its recruitment for this purpose. In
+line with thisfinding, adductor magnus mCSA changes favor a
+greater squat depth (Kubo et al., 2019). Hamstring mCSA changes
+did not occur in either group, in accordance with previous work
+(Kubo et al., 2019). Critically, these data imply that the hip thrust
+exercise primarily targets gluteus muscle hypertrophy while limiting
+non-gluteal thigh muscle hypertrophy; in other words, the hip thrust
+appears to be more gluteus maximus-specific.
+Strength outcomes
+Both groups effectively increased strength outcomes for all
+exercises tested, with magnitudes in accordance with previous
+strength literature (Lacio et al., 2021). However, HT RT better
+increased hip thrust strength and SQ RT better increased back
+squat strength, which is to be expected due to training specificity
+(Morrissey et al., 1995). Back squat 3RM increased by 17% in the HT
+group and 44% in the SQ group, while hip thrust strength increased
+by 63% in HT group and 34% in SQ group. In contrast, deadlift and
+wall push outcomes increased similarly in both groups. Deadlift
+increased by 15% in SQ and 16% in HT, and wall push increased by
+7.6% in SQ and 10% in HT.
+Using acutefirst bout sEMG to predict
+hypertrophy
+Our secondary aim was to evaluate the ability of sEMG to
+forecast longitudinal adaptations. In agreement with previous work
+(Contreras et al., 2015), gluteus muscle sEMG amplitudes during the
+hip thrust exercise were greater across all measured gluteal sites.
+However, these sEMG amplitude differences did not reliably
+translate to greater hypertrophy, no matter what analytical
+approach we took. Specifically, i) individuals with greater sEMG
+amplitudes did not consistently experience greater growth; ii)
+regions with greater sEMG amplitudes did not consistently
+experience greater growth; iii) differences in sEMG amplitudes
+between exercises could not consistently explain differences in
+growth, in large part since the hypertrophy results were
+equivocal. Thisfinding implies that acute sEMG readings during
+a workout bout are not predictive of hypertrophic outcomes, and
+this viewpoint is supported by a recent review by Vigotsky et al.
+(Vigotsky et al., 2022). As indicated by the authors, inconsistent
+relationships between EMG amplitudes and muscle growth have
+been previously reported, which may be due to one or several
+reasons, ranging from biases in the sEMG recordings to
+assumptions about how adaptations occur (Vigotsky et al., 2022).
+Evidently, the reliance on acute sEMG measurements may in fact be
+an over-reliance, but more work is needed in this realm.
+Finally, we also verbally asked participants which exercise they
+“felt more”in the gluteal muscles after testing both exercises. All
+participants indicated they felt the hip thrust more in the gluteal
+
+region. However, these data were not quantified and, despite these
+anecdotal sensations and sEMG differences indicating more gluteus
+muscle excitation during HT, hip thrust RT and squat RT elicited
+similar applied outcomes. Thesefindings highlight the importance
+of longitudinal investigations.
+Limitations
+Our study has a few limitations to consider. First, our participants
+were young untrained men and women; thus, results cannot necessarily
+be generalized to other populations including adolescents, older
+individuals, or trained populations. Additionally, like most training
+studies, this study was limited in duration. It should also be noted
+that gluteal hypertrophy was themain outcome, and the MRI coil was
+placed over this region as subjects were lying prone. Thus, compression
+may have affected the thigh musculature, and distal measures were not
+obtained for the thigh. Finally, training volume was equated, and
+frequency was set at two training days per week. Therefore, results
+can only be generalized to this protocol.
+Although we did not consider female participants’menstrual
+cycle phase or contraceptive usage, we do not view this as a
+limitation. In this regard, several reports indicate that
+contraceptives have no meaningful impact on muscle
+hypertrophy in younger female participants during periods of
+resistance training (Ruzic et al., 2003;Dalgaard et al., 2019;
+Romance et al., 2019;Dalgaard et al., 2020;Oxfeldt et al., 2020;
+Riechman and Lee, 2021). Likewise, well-controlled trials indicate
+that the menstrual cycle phase does not affect strength
+characteristics (Romero-Moraleda et al., 2019), and that
+variations in female hormones during different phases do not
+affect muscle hypertrophy and strength gains during 12 weeks of
+resistance training (Sakamaki-Sunaga et al., 2016).
+Future directions
+Future research should aim to examine a group that performs
+both exercises on a volume-equated basis to determine if there are
+synergetic effects. Comparing these exercises with different
+volumes/frequencies is also warranted as exercises may have
+differing volume tolerances. From a mechanistic standpoint,
+future studies should characterize anabolic signaling between
+different points on the length-tension curve as well as ascertain
+where a muscle exists on this curve with more clarity.
+Conclusion
+Squat and hip thrust RT elicited similar gluteal hypertrophy, whereas
+quadriceps and adductors hypertrophy was superior with squat training.
+Further, although strength increases were specifictoexerciseallocation,
+both forms of RT elicited similar strength transfer to the deadlift and wall
+push. Importantly, these results could not be reliably predicted from
+acute data (sEMG). These current data provide trainees with valuable
+insight concerning two widely popular hip-specific exercise modalities,
+and this information can be leveraged for exercise selection based on
+specific structural or functional goals.
+Data availability statement
+The raw data supporting the conclusion of this article will be
+made available by the authors, without undue reservation.
+Ethics statement
+The studies involving humans were approved by the Auburn
+University Institutional Review Board. The studies were conducted
+in accordance with the local legislation and institutional
+requirements. The participants provided their written informed
+consent to participate in this study.
+Author contributions
+DP: Conceptualization, Data curation, Formal Analysis,
+Investigation,Methodology,Projectadministration,
+Writing–original draft, Writing–review and editing. MR:
+Investigation, Methodology, Supervision, Writing–review and
+editing. AV: Data curation, Formal Analysis, Methodology,
+Software, Validation, Writing–review and editing. MM:
+Investigation, Methodology, Writing–review and editing. EB:
+Methodology, Writing–review and editing. RU: Investigation,
+Methodology, Writing–review and editing. CR: Methodology,
+Writing–review and editing. A-AB: Methodology, Writing–review
+and editing. MM: Investigation, Methodology, Writing–review and
+editing. MM: Investigation, Methodology, Writing–review and
+editing. NK: Investigation, Methodology, Writing–review and
+editing. SL: Data curation, Formal Analysis, Methodology,
+Writing–review and editing. AF: Formal Analysis, Investigation,
+Methodology, Writing–review and editing. CW: Data curation,
+Formal Analysis, Investigation, Methodology, Resources,
+Writing–review and editing. WW: Data curation, Methodology,
+Resources, Software, Writing–review and editing. AB: Data
+curation, Investigation, Methodology, Resources, Writing–review
+and editing. RB: Data curation, Methodology, Resources, Software,
+Writing–review and editing. MH: Conceptualization, Funding
+acquisition, Writing–review and editing. BC: Conceptualization,
+Funding acquisition, Writing–review and editing. MR:
+Conceptualization, Formal Analysis, Funding acquisition,
+Investigation, Project administration, Supervision, Writing–review
+and editing.
+Funding
+The author(s) declarefinancial support was received for the
+research, authorship, and/or publication of this article. Funding for
+this study was made possible through gift funds (some of which were
+donated by the International Scientific Research Foundation for
+Fitness and Nutrition and BC) to the MR laboratory. Other
+financial sources included indirect cost sharing (generated from
+various unrelated contracts) from the School of Kinesiology, MM
+being fully supported through a T32 NIH grant (T32GM141739), and
+DP being fully supported by a Presidential Graduate Research
+Fellowship (fund cost-sharing from Auburn University’s
+
+President’soffice, the College of Education, and the School of
+Kinesiology).
+Acknowledgments
+We thank the participants who volunteered and participated in
+the study. We also thank Bradley Ruple, Josh Godwin, and C. Brooks
+Mobley for their assistance and insight throughout the project. We
+also thank Jeremy Ethier for donating whey protein to the study.
+Raw data related to the current study outcomes will be provided
+upon reasonable request by emailing the latter corresponding author
+(MR) atmdr0024@auburn.edu.
+Conflict of interest
+BC and MH disclose that they sell exercise-related products
+and services. However, neither was involved in any aspect of the
+study beyond assisting with the study design and providing
+funds to partially cover participant and MRI costs through a gift
+to the laboratory of MR. The results of the study are presented
+clearly, honestly, and without fabrication, falsification, or
+inappropriate data manipulation.
+The remaining authors declare that the research was
+conducted in the absence of any commercial orfinancial
+relationships that could beconstrued as a potential conflict of
+interest.
+Publisher’s note
+All claims expressed in this article are solely those of the authors
+and do not necessarily represent those of their affiliated
+organizations, or those of the publisher, the editors and the
+reviewers. Any product that may be evaluated in this article, or
+claim that may be made by its manufacturer, is not guaranteed or
+endorsed by the publisher.
+References
+Bland, J. M., and Altman, D. G. (2011). Comparisons against baseline within
+randomised groups are often used and can be highly misleading.Trials12, 264.
+doi:10.1186/1745-6215-12-264
+Boren, K., Conrey, C., Le Coguic, J., Paprocki, L., Voight, M., and Robinson, T. K.
+(2011). Electromyographic analysis of gluteus medius and gluteus maximus during
+rehabilitation exercises.Int. J. Sports Phys. Ther.6, 206–223.
+Brazil, A., Needham, L., Palmer, J. L., and Bezodis, I. N. (2021). A comprehensive
+biomechanical analysis of the barbell hip thrust.PLoS ONE16, e0249307. doi:10.1371/
+journal.pone.0249307
+Chiu, L. Z., Vongaza, G. L., and Jean, L. M. (2017). Net joint moments and muscle
+activation in barbell squats without and with restricted anterior leg rotation.J. Sports Sci.
+35, 35–43. doi:10.1080/02640414.2016.1154978
+Collings, T. J., Bourne, M. N., Barrett, R. S., Meinders, E., Bam, G. O., Shield, A. J.,
+et al. (2023a). Gluteal muscle forces during hip-focused injury prevention and
+rehabilitation exercises.Med. Sci. Sports Exerc55, 650–660. doi:10.1249/MSS.
+0000000000003091
+Collings, T. J., Bourne, M. N., Barrett, R. S., Meinders, E., Gonçalves, B. a.M., Shield,
+A. J., et al. (2023b). Gluteal muscle forces during hip-focused injury prevention and
+rehabilitation exercises.Med. Sci. Sports Exerc.55, 650–660. doi:10.1249/MSS.
+0000000000003091
+Contreras, B., Vigotsky, A. D., Schoenfeld, B. J., Beardsley, C., and Cronin, J. (2015). A
+comparison of gluteus maximus, biceps femoris, and vastus lateralis electromyographic
+activity in the back squat and barbell hip thrust exercises.J. Appl. Biomechanics31,
+452–458. doi:10.1123/jab.2014-0301
+Dalgaard,L.B.,Dalgas,U.,Andersen,J.L.,Rossen,N.B.,Moller,A.B.,
+Stodkilde-Jorgensen, H., et al. (2019). Influence of oral contraceptive use on
+adaptations to resistance training.Front. Physiol.10, 824. doi:10.3389/fphys.
+2019.00824
+Dalgaard, L. B., Jorgensen, E. B., Oxfeldt, M., Dalgaard, E. B., Johansen, F. T.,
+Karlsson, M., et al. (2020). Influence of second generation oral contraceptive use on
+adaptations to resistance training in young untrained women.J. Strength Cond. Res.36,
+1801–1809. doi:10.1519/JSC.0000000000003735
+Delgado, J., Drinkwater, E. J., Banyard, H. G., Haff, G. G., and Nosaka, K. (2019).
+Comparison between back squat, Romanian deadlift, and barbell hip thrust for leg and
+hip muscle activities during hip extension.J. Strength Cond. Res.33, 2595–2601. doi:10.
+1519/JSC.0000000000003290
+Egan, B., and Sharples, A. P. (2023). Molecular responses to acute exercise and their
+relevance for adaptations in skeletal muscle to exercise training.Phys. Rev.103,
+2057–2170. doi:10.1152/physrev.00054.2021
+Fujisawa, H., Suzuki, H., Yamaguchi, E., Yoshiki, H., Wada, Y., and Watanabe, A.
+(2014). Hip muscle activity during isometric contraction of hip abduction.J. Phys. Ther.
+Sci.26, 187–190. doi:10.1589/jpts.26.187
+Godwin, J. S., Sexton, C. L., Kontos, N. J., Ruple, B. A., Willoughby, D. S., Young, K.
+C., et al. (2023). Extracellular matrix content and remodeling markers do not differ in
+college-aged men classified as higher and lower responders to resistance training.
+J. Appl. Physiol.134, 731–741. doi:10.1152/japplphysiol.00596.2022
+Haun, C. T., Vann, C. G., Mobley, C. B., Roberson, P. A., Osburn, S. C., Holmes, H.
+M., et al. (2018). Effects of graded whey supplementation during extreme-volume
+resistance training.Front. Nutr.5, 84. doi:10.3389/fnut.2018.00084
+Herzog, W., and Leonard, T. R. (1991). Validation of optimization models that
+estimate the forces exerted by synergistic muscles.
+J. Biomech.24, 31–39. doi:10.1016/
+0021-9290(91)90375-w
+Kassiano, W., Costa, B., Kunevaliki, G., Soares, D., Zacarias, G., Manske, I., et al.
+(2023a). Greater gastrocnemius muscle hypertrophy after partial range of motion
+training performed at long muscle lengths.J. Strength Cond. Res.37, 1746–1753.
+doi:10.1519/JSC.0000000000004460
+Kassiano, W., Costa, B., Nunes, J. P., Ribeiro, A. S., Schoenfeld, B. J., and Cyrino, E. S.
+(2023b). Which ROMs lead to rome? A systematic review of the effects of range of
+motion on muscle hypertrophy.J. Strength Cond. Res.37, 1135–1144. doi:10.1519/JSC.
+0000000000004415
+Kubo, K., Ikebukuro, T., and Yata, H. (2019). Effects of squat training with different
+depths on lower limb muscle volumes.Eur. J. Appl. Physiology119, 1933–1942. doi:10.
+1007/s00421-019-04181-y
+Kulmala, J. P., Korhonen, M. T., Kuitunen, S., Suominen, H., Heinonen, A., Mikkola,
+A., et al. (2014). Which muscles compromise human locomotor performance with age?
+J. R. Soc. Interface11, 20140858. doi:10.1098/rsif.2014.0858
+Lacio, M., Vieira, J. G., Trybulski, R., Campos, Y., Santana, D., Filho, J. E., et al. (2021).
+Effects of resistance training performed with different loads in untrained and trained
+male adult individuals on maximal strength and muscle hypertrophy: A systematic
+review.Int. J. Environ. Res. Public Health18, 11237. doi:10.3390/ijerph182111237
+Lahti, J., Hegyi, A., Vigotsky, A. D., and Ahtiainen, J. P. (2019). Effects of barbell back
+squat stance width on sagittal and frontal hip and knee kinetics.Scand. J. Med. Sci.
+Sports29, 44–54. doi:10.1111/sms.13305
+Maeo, S., Huang, M., Wu, Y., Sakurai, H., Kusagawa, Y., Sugiyama, T., et al. (2021).
+Greater hamstrings muscle hypertrophy but similar damage protection after training at
+long versus short muscle lengths.Med. Sci. Sports Exerc.53, 825–837. doi:10.1249/MSS.
+0000000000002523
+Maeo, S., Wu, Y., Huang, M., Sakurai, H., Kusagawa, Y., Sugiyama, T., et al. (2022).
+Triceps brachii hypertrophy is substantially greater after elbow extension training
+performed in the overhead versus neutral arm position.Eur. J. Sport Sci.23, 1240–1250.
+doi:10.1080/17461391.2022.2100279
+Miller, R., Balshaw, T. G., Massey, G. J., Maeo, S., Lanza, M. B., Johnston, M., et al.
+(2021). The muscle morphology of elite sprint running.Med. Sci. Sports Exerc53,
+804–815. doi:10.1249/MSS.0000000000002522
+Mobley, C. B., Haun, C. T., Roberson, P. A., Mumford, P. W., Kephart, W. C.,
+Romero, M. A., et al. (2018). Biomarkers associated with low, moderate, and high vastus
+lateralis muscle hypertrophy following 12 weeks of resistance training.PLoS ONE13,
+e0195203. doi:10.1371/journal.pone.0195203
+Moon, J. R., Tobkin, S. E., Roberts, M. D., Dalbo, V. J., Kerksick, C. M., Bemben, M.
+G., et al. (2008). Total body water estimations in healthy men and women using
+bioimpedance spectroscopy: A deuterium oxide comparison.Nutr. Metab. (Lond)5, 7.
+doi:10.1186/1743-7075-5-7
+
+Morrissey, M. C., Harman, E. A., and Johnson, M. J. (1995). Resistance training
+modes: specificity and effectiveness.Med. Sci. sports Exerc.27, 648–660. doi:10.1249/
+00005768-199505000-00006
+Oxfeldt, M., Dalgaard, L. B., Jorgensen, E. B., Johansen, F. T., Dalgaard, E. B.,
+Ortenblad, N., et al. (2020). Molecular markers of skeletal muscle hypertrophy following
+10 wk of resistance training in oral contraceptive users and nonusers.J. Appl. Physiol.
+129, 1355–1364. doi:10.1152/japplphysiol.00562.2020
+Riechman, S. E., and Lee, C. W. (2021). Oral contraceptive use impairs muscle gains in
+young women.J.StrengthCond.Res.36, 3074–3080. doi:10.1519/JSC.
+0000000000004059
+Roberts, M. D., Mccarthy, J. J., Hornberger, T. A., Phillips, S. M., Mackey, A. L., Nader,
+G. A., et al. (2023). Mechanisms of mechanical overload-induced skeletal muscle
+hypertrophy: current understanding and future directions.Physiol. Rev.103,
+2679–2757. doi:10.1152/physrev.00039.2022
+Romance,R.,Vargas,S.,Espinar,S.,Petro,J.L.,Bonilla,D.A.,Schoenfeld,B.J.,
+et al. (2019). Oral contraceptive use does not negatively affect body composition
+and strength adaptations in trained women.Int. J. Sports Med.40, 842–849. doi:10.
+1055/a-0985-4373
+Romero-Moraleda, B., Coso, J. D., Gutiérrez-Hellín, J., Ruiz-Moreno, C., Grgic, J., and
+Lara, B. (2019). The influence of the menstrual cycle on muscle strength and power
+performance.J. Hum. Kinet.68, 123–133. doi:10.2478/hukin-2019-0061
+Ruzic, L., Matkovic, B. R., and Leko, G. (2003). Antiandrogens in hormonal
+contraception limit muscle strength gain in strength training: comparison study.
+Croat. Med. J.44, 65–68.
+Sakamaki-Sunaga, M., Min, S., Kamemoto,K.,andOkamoto,T.(2016).Effects
+of menstrual phase-dependent resistance training frequency on muscular
+hypertrophy and strength.J. strength Cond. Res.30, 1727–1734. doi:10.1519/
+JSC.0000000000001250
+Schakel, S. F. (2001). Maintaining a nutrient database in a changing marketplace:
+keeping pace with changing food products—a research perspective.J. Food Compos
+Anal.14, 315–322. doi:10.1006/jfca.2001.0992
+Senn, S. (1994). Testing for baseline balance in clinical trials.Statistics Med.13,
+1715–1726. doi:10.1002/sim.4780131703
+Smith, M. A., Sexton, C. L., Smith, K. A., Osburn, S. C., Godwin, J. S., Beausejour, J. P.,
+et al. (2023). Molecular predictors of resistance training outcomes in young untrained
+female adults.J. Appl. Physiol.134, 491–507. doi:10.1152/japplphysiol.00605.2022
+Vann, C. G., Osburn, S. C., Mumford, P. W., Roberson, P. A., Fox, C. D., Sexton, C. L.,
+et al. (2020). Skeletal muscle protein composition adaptations to 10 Weeks of high-load
+resistance training in previously-trained males.Front. Physiol.11, 259. doi:10.3389/
+fphys.2020.00259
+Vickers, A. J., and Altman, D. G. (2001). Statistics notes: analysing controlled trials
+with baseline and follow up measurements.BMJ Clin. Res. ed.)323, 1123–1124. doi:10.
+1136/bmj.323.7321.1123
+Vigotsky, A. D., Halperin, I., Trajano, G. S., and Vieira, T. M. (2022). Longing for a
+longitudinal proxy: acutely measured surface EMG amplitude is not a validated
+predictor of muscle hypertrophy.Sports Med. Auckl. N.Z.)52, 193–199. doi:10.1007/
+s40279-021-01619-2
+Warneke, K., Wirth, K., Keiner, M., Lohmann, L. H., Hillebrecht, M., Brinkmann, A.,
+et al. (2023). Comparison of the effects of long-lasting static stretching and hypertrophy
+training on maximal strength, muscle thickness andflexibility in the plantarflexors.
+Eur. J. Appl. Physiology123, 1773–1787. doi:10.1007/s00421-023-05184-6
+Waters, R. L., Perry, J., Mcdaniels, J. M., and House, K. (1974). The relative strength of
+the hamstrings during hip extension.J. Bone Jt. Surg. Am.56, 1592–1597. doi:10.2106/
+00004623-197456080-00006
+Williams, M. J., Gibson, N. V., Sorbie, G. G., Ugbolue, U. C., Brouner, J., and Easton,
+C. (2021). Activation of the gluteus maximus during performance of the back squat, split
+squat, and barbell hip thrust and the relationship with maximal sprinting.J. Strength
+Cond. Res.35, 16–24. doi:10.1519/JSC.0000000000002651
+Zabaleta-Korta, A., Fernández-Peña, E., Torres-Unda, J., Garbisu-Hualde, A., and
+Santos-Concejero, J. (2021). The role of exercise selection in regional muscle
+hypertrophy: A randomized controlled trial.J. Sports Sci.39, 2298–2304. doi:10.
+1080/02640414.2021.1929736
